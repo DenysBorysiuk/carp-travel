@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>home</div>;
+  return <div className="mb-5 border">home</div>;
 }
