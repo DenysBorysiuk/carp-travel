@@ -16,9 +16,9 @@ body {
   @apply font-inter text-[14px] leading-[1.42] text-white;
 }
 
-section {
+/* section {
   @apply container xl:max-w-screen-xl;
-}
+} */
 
 h1,
 h2 {
@@ -32,4 +32,54 @@ p {
 
 .section {
   @apply py-[56px] md:py-[64px] xl:py-[104px];
+}
+
+/* hero */
+
+.frame:before {
+  position: absolute;
+  left: 0;
+  display: inline-flex;
+  content: '';
+  height: 53px;
+  width: 42px;
+  background-image: url('/icons/frame-l_sm.svg');
+}
+
+.frame:after {
+  position: absolute;
+  right: 0;
+  display: inline-flex;
+  content: '';
+  height: 53px;
+  width: 42px;
+  background-image: url('/icons/frame-r_sm.svg');
+}
+
+@media screen and (min-width: 768px) {
+  .frame:before {
+    height: 50px;
+    width: 35px;
+    background-image: url('/icons/frame-l_md.svg');
+  }
+
+  .frame:after {
+    height: 50px;
+    width: 35px;
+    background-image: url('/icons/frame-r_md.svg');
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .frame:before {
+    height: 71px;
+    width: 44px;
+    background-image: url('/icons/frame-l_lg.svg');
+  }
+
+  .frame:after {
+    height: 71px;
+    width: 44px;
+    background-image: url('/icons/frame-r_lg.svg');
+  }
 }

@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500'],
+  weight: ['100', '200', '300', '400', '500', '700'],
   variable: '--font-inter',
   display: 'swap',
 });
