@@ -1,5 +1,5 @@
 const GallerySection = () => {
-  return <section></section>;
+  return <section className="section" id="gallery"></section>;
 };
 
 export default GallerySection;

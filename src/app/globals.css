@@ -16,6 +16,14 @@ body {
   @apply font-inter text-[14px] leading-[1.42] text-white;
 }
 
+section {
+  @apply container xl:max-w-screen-xl;
+}
+
 p {
   @apply font-extralight;
+}
+
+.section {
+  @apply py-[56px] md:py-[64px] xl:py-[104px];
 }

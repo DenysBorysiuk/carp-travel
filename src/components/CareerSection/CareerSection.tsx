@@ -1,5 +1,5 @@
 const CareerSection = () => {
-  return <section></section>;
+  return <section className="section" id="career"></section>;
 };
 
 export default CareerSection;

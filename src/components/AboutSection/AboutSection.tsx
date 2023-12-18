@@ -1,8 +1,5 @@
 const AboutSection = () => {
-    return (
-        <section>
-        </section>
-    );
+  return <section className="section" id="about"></section>;
 };
 
 export default AboutSection;
