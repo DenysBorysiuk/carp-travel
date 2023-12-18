@@ -1,8 +1,14 @@
 {
-  "title": "Uncover Carpathian’s Secrets",
-  "subtitle": ["7", "days", "journey"],
+  "title": {
+    "textAccent": "Uncover",
+    "text": "Carpathian’s Secrets"
+  },
+  "subtitle": {
+    "textLarge": "7days",
+    "text": "journey"
+  },
   "text": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
-  "list": ["Hoverla", "Yaremche", "Zakarpattia", "Vorokhta", "Synevyr Lake", "Bukovel"],
+  "resorts": "Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel",
   "link": {
     "title": "Join now",
     "href": "#contacts"
