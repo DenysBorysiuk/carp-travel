@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  @apply font-inter text-[14px] leading-[1.42] text-white;
+  @apply bg-body font-inter text-[14px] leading-[1.42] text-white;
 }
 
 /* section {
@@ -37,49 +37,27 @@ p {
 /* hero */
 
 .frame:before {
-  position: absolute;
-  left: 0;
-  display: inline-flex;
   content: '';
-  height: 53px;
-  width: 42px;
-  background-image: url('/icons/frame-l_sm.svg');
+  @apply absolute left-0 h-[53px] w-[42px] bg-[url('/icons/frame-l_sm.svg')];
+  @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-l_md.svg')];
+  @apply xl:h-[71px] xl:w-[44px] xl:bg-[url('/icons/frame-l_lg.svg')];
 }
 
 .frame:after {
-  position: absolute;
-  right: 0;
-  display: inline-flex;
   content: '';
-  height: 53px;
-  width: 42px;
-  background-image: url('/icons/frame-r_sm.svg');
+  @apply absolute right-0 h-[53px] w-[42px] bg-[url('/icons/frame-r_sm.svg')];
+  @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-r_md.svg')];
+  @apply xl:h-[71px] xl:w-[44px] xl:bg-[url('/icons/frame-r_lg.svg')];
 }
 
-@media screen and (min-width: 768px) {
-  .frame:before {
-    height: 50px;
-    width: 35px;
-    background-image: url('/icons/frame-l_md.svg');
-  }
-
-  .frame:after {
-    height: 50px;
-    width: 35px;
-    background-image: url('/icons/frame-r_md.svg');
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .frame:before {
-    height: 71px;
-    width: 44px;
-    background-image: url('/icons/frame-l_lg.svg');
-  }
-
-  .frame:after {
-    height: 71px;
-    width: 44px;
-    background-image: url('/icons/frame-r_lg.svg');
-  }
+.hero-bg {
+  background-repeat: no-repeat;
+  /* background-position: top center; */
+  background-size:
+    auto 287px,
+    cover,
+    cover;
+  background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75) 0%, rgba(0, 37, 49, 0) 100%),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(url('/images/hero/hero_sm@1x.webp') 1x, url('/images/hero/hero_sm@2x.webp') 2x);
 }

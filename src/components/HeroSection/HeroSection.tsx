@@ -4,7 +4,7 @@ import Link from 'next/link';
 const HeroSection = () => {
   return (
     <section
-      className=" bg-zinc-900 pb-[56px] pt-[105px]
+      className=" hero-bg pb-[56px] pt-[105px]
       md:pb-[64px] md:pt-[121px] xl:pb-[104px] xl:pt-[130px]"
     >
       <div className="container flex flex-col gap-[24px] xl:max-w-screen-xl">

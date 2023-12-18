@@ -31,6 +31,9 @@ const config: Config = {
         inter: ['var(--font-inter)'],
         karantina: ['var(--font-karantina)'],
       },
+      colors: {
+        body: '#D9D9D9',
+      },
     },
   },
   plugins: [],
