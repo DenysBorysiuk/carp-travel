@@ -13,5 +13,9 @@ html {
 }
 
 body {
-  @apply font-inter font-extralight;
+  @apply font-inter text-[14px] leading-[1.42] text-white;
+}
+
+p {
+  @apply font-extralight;
 }
