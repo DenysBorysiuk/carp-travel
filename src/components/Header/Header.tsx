@@ -4,10 +4,13 @@ import Navigation from '@/components/ui/Navigation';
 
 const Header = () => {
   return (
-    <header className="container flex items-center justify-between bg-slate-600">
+    <header
+      className="container flex items-center justify-between bg-slate-600
+      pt-[36px] md:pt-[24px] "
+    >
       <Logo />
       <MobileMenu />
-      <Navigation className={'hidden md:flex md:gap-[24px] xl:gap-[56px]'} />
+      <Navigation variant={'header'} className={'md:gap-[24px] xl:gap-[56px]'} />
     </header>
   );
 };
