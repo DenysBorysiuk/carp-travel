@@ -13,5 +13,5 @@ html {
 }
 
 body {
-  @apply font-inter;
+  @apply font-inter font-extralight;
 }

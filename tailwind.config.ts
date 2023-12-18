@@ -29,6 +29,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)'],
+        karantina: ['var(--font-karantina)'],
       },
     },
   },
