@@ -18,7 +18,7 @@
     }
   ],
   "subtitle": {
-    "textAccent": "From vacationers to active travelers",
+    "textAccent": ["From vacationers", "to active travelers"],
     "text": "we have a tour for everyone."
   }
 }
