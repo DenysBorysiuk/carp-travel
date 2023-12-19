@@ -1,4 +1,4 @@
-export type NavigationProps = {
-  variant: 'header' | 'mobile-menu';
+export type SectionTitleProps = {
   className?: string;
+  data: { text: string; textAccent: string };
 };

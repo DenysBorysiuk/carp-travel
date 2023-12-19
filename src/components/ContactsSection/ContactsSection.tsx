@@ -1,9 +1,9 @@
 import SectionTitle from '@/components/ui/SectionTitle';
-import data from '@/data/services.json';
+import data from '@/data/career.json';
 
-const ServicesSection = () => {
+const ContactsSection = () => {
   return (
-    <section className="section" id="services">
+    <section className="" id="contacts">
       <div className="container xl:max-w-screen-xl">
         <SectionTitle className={''} data={data.title} />
       </div>
@@ -11,4 +11,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default ContactsSection;

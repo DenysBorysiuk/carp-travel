@@ -1,5 +1,5 @@
-import data from '@/data/hero.json';
 import Link from 'next/link';
+import data from '@/data/hero.json';
 
 const HeroSection = () => {
   return (
