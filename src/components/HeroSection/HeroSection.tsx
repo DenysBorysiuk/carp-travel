@@ -32,8 +32,7 @@ const HeroSection = () => {
           </span>
         </p>
         <p
-          className="text-justify md:mb-[28px] md:w-[230px] md:text-[16px] md:leading-[1.25] xl:w-[294px]
-          xl:text-[18px] xl:leading-[1.33] "
+          className="text-justify md:mb-[28px] md:w-[230px] xl:w-[294px]"
         >
           {data.text}
         </p>
