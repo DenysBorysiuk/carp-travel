@@ -20,7 +20,6 @@ const config: Config = {
       center: true,
       padding: {
         DEFAULT: '20px',
-        sm: '20px',
         md: '32px',
         xl: '24px',
       },

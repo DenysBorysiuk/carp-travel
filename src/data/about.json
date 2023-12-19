@@ -1,4 +1,7 @@
 {
-  "title": ["Who", "we are"],
+  "title": {
+    "text": "Who",
+    "textAccent": "we are"
+  },
   "subtitle": ["From vacationers to active travelers", "we have a tour for everyone"]
 }

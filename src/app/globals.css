@@ -16,18 +16,14 @@ body {
   @apply bg-body font-inter text-[14px] leading-[1.42] text-white;
 }
 
-/* section {
-  @apply container xl:max-w-screen-xl;
-} */
-
-.section {
+section {
   @apply py-[56px] md:py-[64px] xl:py-[104px];
 }
 
 h1,
 h2 {
   @apply text-[40px] font-thin uppercase leading-[1.4] tracking-[-1.6px] md:text-[67px] 
-  md:leading-[1.2] md:tracking-[-2.68px] xl:text-[98px] xl:tracking-[-3.92px];
+  md:leading-[1.21] md:tracking-[-2.68px] xl:text-[98px] xl:tracking-[-3.92px];
 }
 
 p {
@@ -62,7 +58,7 @@ p {
     image-set(url('/images/hero/hero_sm@1x.webp') 1x, url('/images/hero/hero_sm@2x.webp') 2x);
 
   @media screen and (min-width: 481px) {
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.5) 0%, rgba(0, 37, 49, 0) 100%),
+    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75) 0%, rgba(0, 37, 49, 0) 100%),
       linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       image-set(url('/images/hero/hero_md@1x.webp') 1x, url('/images/hero/hero_md@2x.webp') 2x);
   }
