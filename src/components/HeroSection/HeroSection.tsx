@@ -18,24 +18,20 @@ const HeroSection = () => {
         >
           {data.resorts}
         </p>
-        <p
-          className="relative block h-[52px] w-[118px] text-[37px] font-thin uppercase leading-[1.21] tracking-[1.64px] first-letter:font-medium 
-          first-letter:tracking-normal md:mb-[56px] md:h-[88px] md:w-[230px] md:text-[67px] xl:mb-[181px] xl:h-[123px] 
-          xl:w-[305px] xl:text-[98px] smOnly:order-[-1] smOnly:ml-auto mdOnly:tracking-[8.71px]"
+        <h2
+          className="relative block h-[52px] w-[118px] leading-[1.21] tracking-[1.64px] first-letter:font-medium 
+          first-letter:tracking-normal md:mb-[56px] md:h-[88px] md:w-[230px] xl:mb-[181px] xl:h-[123px] 
+          xl:w-[305px] smOnly:order-[-1] smOnly:ml-auto smOnly:text-[37px] mdOnly:tracking-[8.71px]"
         >
           {data.subtitle.textLarge}
           <span
             className="absolute bottom-[-1px] block text-[12px] font-light tracking-[9.48px] md:text-[14px]
-            md:tracking-[25.9px]  xl:text-[16px] xl:tracking-[36.48px]"
+            md:tracking-[25.9px] xl:text-[16px] xl:tracking-[36.48px]"
           >
             {data.subtitle.text}
           </span>
-        </p>
-        <p
-          className="text-justify md:mb-[28px] md:w-[230px] xl:w-[294px]"
-        >
-          {data.text}
-        </p>
+        </h2>
+        <p className="text-justify md:mb-[28px] md:w-[230px] xl:w-[294px]">{data.text}</p>
         <Link
           href={data.link.href}
           className="frame relative flex h-[53px] items-center justify-center bg-white/10 text-[18px]
