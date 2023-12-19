@@ -7,7 +7,7 @@ const Header = () => {
     <header className="absolute left-0 right-0 top-0 ">
       <div
         className="container flex items-center justify-between
-        pt-[36px] md:pt-[24px] xl:max-w-screen-xl"
+        pt-[36px] md:pt-[24px]"
       >
         <Logo />
         <MobileMenu />

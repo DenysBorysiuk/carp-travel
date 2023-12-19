@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className=" hero-bg pt-[105px] md:pt-[121px] xl:pt-[130px]">
       <div
         className="container flex flex-col flex-wrap md:h-[345px] md:gap-x-[48px]
-        xl:h-[529px] xl:max-w-screen-xl xl:gap-x-[281px] smOnly:gap-[24px]"
+        xl:h-[529px] xl:gap-x-[281px] smOnly:gap-[24px]"
       >
         <h1 className="w-[280px] md:mb-[68px] md:w-[426px] xl:mb-[148px] xl:w-[646px]">
           <span className="font-medium">{data.title.textAccent} </span>

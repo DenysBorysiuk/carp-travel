@@ -4,7 +4,7 @@ import data from '@/data/gallery.json';
 const GallerySection = () => {
   return (
     <section className="" id="gallery">
-      <div className="container xl:max-w-screen-xl">
+      <div className="container">
         <SectionTitle className={''} data={data.title} />
       </div>
     </section>
