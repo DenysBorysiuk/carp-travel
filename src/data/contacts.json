@@ -2,5 +2,44 @@
   "title": {
     "text": "Contact",
     "textAccent": "us"
+  },
+  "phones": {
+    "text": "Phone number",
+    "numbers": [
+      {
+        "label": "+38 (098) 12 34 567",
+        "href": "tel:+380981234567"
+      },
+      {
+        "label": "+38 (073) 12 34 567",
+        "href": "tel:+380731234567"
+      }
+    ]
+  },
+  "email": {
+    "text": "E-mail",
+    "label": "support@carptravel.com",
+    "href": "mailto:support@carptravel.com"
+  },
+  "socials": {
+    "text": "Follow us",
+    "links": [
+      {
+        "label": "facebook",
+        "href": "https://www.facebook.com/"
+      },
+      {
+        "label": "instagram",
+        "href": "https://www.instagram.com/"
+      },
+      {
+        "label": "youtube",
+        "href": "https://www.youtube.com/"
+      },
+      {
+        "label": "tiktok",
+        "href": "https://www.tiktok.com/"
+      }
+    ]
   }
 }

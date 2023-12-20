@@ -8,12 +8,12 @@ import ContactsSection from '@/components/ContactsSection';
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <AboutSection />
-      {/* <ServicesSection />
+      <ServicesSection />
       <CareerSection />
-      <GallerySection />
-      <ContactsSection /> */}
+      <GallerySection /> */}
+      <ContactsSection />
     </>
   );
 }
