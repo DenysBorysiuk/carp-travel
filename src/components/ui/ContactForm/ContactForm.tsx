@@ -7,7 +7,7 @@ interface IFormInputs {
   lastName: string;
 }
 
-const ContactsForm = () => {
+const ContactForm = () => {
   const {
     register,
     formState: { errors },
@@ -27,4 +27,4 @@ const ContactsForm = () => {
   );
 };
 
-export default ContactsForm;
+export default ContactForm;

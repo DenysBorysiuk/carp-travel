@@ -31,7 +31,7 @@ const config: Config = {
         karantina: ['var(--font-karantina)'],
       },
       colors: {
-        body: '#D9D9D9',
+        body: '#0A1813',
       },
     },
   },
