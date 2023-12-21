@@ -2,8 +2,8 @@ import data from '@/data/contacts.json';
 
 const ContactDetails = () => {
   return (
-    <div>
-      <div className="mb-[24px] flex justify-end gap-[20px] md:ml-[30px]  xl:mb-[64px]">
+    <div className="smOnly:ml-auto smOnly:w-[280px]">
+      <div className="mb-[24px] flex justify-end gap-[20px] md:ml-[30px] xl:mb-[64px]">
         <ul>
           {data.phones.numbers.map(number => (
             <li key={number.label}>
