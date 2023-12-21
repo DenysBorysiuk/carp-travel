@@ -32,6 +32,7 @@ const config: Config = {
       },
       colors: {
         body: '#0A1813',
+        error: '#FF5757',
       },
     },
   },
