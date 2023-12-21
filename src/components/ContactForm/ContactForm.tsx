@@ -38,7 +38,7 @@ const ContactForm = () => {
               Full name
             </label>
             <input
-              className="block h-[24px] w-full bg-white/5 outline-none"
+              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none"
               {...register('name')}
               id="name"
             />
@@ -52,7 +52,7 @@ const ContactForm = () => {
               E-mail
             </label>
             <input
-              className="block h-[24px] w-full bg-white/5 outline-none"
+              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none"
               {...register('email')}
               id="email"
             />
@@ -67,7 +67,7 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
-            className="block h-[193px] w-full resize-none bg-white/5 outline-none"
+            className="block h-[193px] w-full resize-none bg-white/5 px-[8px] outline-none"
             {...register('message')}
             id="message"
           />

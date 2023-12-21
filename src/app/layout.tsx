@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Karantina } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
+import Header from '@/sections/Header';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.variable} ${karantina.variable}`}>
-        {/* <Header /> */}
+        <Header />
         <main>{children}</main>
       </body>
     </html>

@@ -1,6 +1,6 @@
 import SectionTitle from '@/components/ui/SectionTitle';
 import data from '@/data/about.json';
-import AboutText from '@/components/ui/AboutText';
+import AboutText from '@/components/AboutText';
 
 const AboutSection = () => {
   return (
