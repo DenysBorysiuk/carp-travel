@@ -28,8 +28,8 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-[16px] flex flex-col gap-[24px] xl:mb-[24px]">
-        <ul className="flex flex-col gap-[24px]">
+      <div className="mb-[16px] flex flex-col gap-[24px] md:gap-[20px] xl:mb-[24px] xl:gap-[40px] mdOnly:flex-row">
+        <ul className="flex flex-col gap-[24px] xl:flex-row">
           <li>
             <label
               className="mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]"
@@ -38,7 +38,7 @@ const ContactForm = () => {
               Full name
             </label>
             <input
-              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none"
+              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none md:w-[221px] xl:w-[293px]"
               {...register('name')}
               id="name"
             />
@@ -52,7 +52,7 @@ const ContactForm = () => {
               E-mail
             </label>
             <input
-              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none"
+              className="block h-[24px] w-full bg-white/5 px-[8px] outline-none md:w-[221px] xl:w-[293px]"
               {...register('email')}
               id="email"
             />
@@ -67,7 +67,8 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
-            className="block h-[193px] w-full resize-none bg-white/5 px-[8px] outline-none"
+            className="block h-[193px] w-full resize-none bg-white/5 px-[8px] outline-none 
+            md:h-[221px] md:w-[464px] xl:h-[174px] xl:w-[607px]"
             {...register('message')}
             id="message"
           />

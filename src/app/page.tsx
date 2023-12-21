@@ -8,11 +8,11 @@ import ContactsSection from '@/sections/ContactsSection';
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <AboutSection />
       <ServicesSection />
       <CareerSection />
-      <GallerySection />
+      <GallerySection /> */}
       <ContactsSection />
     </>
   );
