@@ -2,8 +2,8 @@ import data from '@/data/contacts.json';
 
 const ContactDetails = () => {
   return (
-    <div className="mb-[24px]">
-      <div className="mb-[24px] flex justify-end gap-[20px]">
+    <div>
+      <div className="mb-[24px] flex justify-end gap-[20px] md:ml-[30px]  xl:mb-[64px]">
         <ul>
           {data.phones.numbers.map(number => (
             <li key={number.label}>
@@ -13,9 +13,9 @@ const ContactDetails = () => {
             </li>
           ))}
         </ul>
-        <p className="text-[12px] xl:leading-loose">{data.phones.text}</p>
+        <p className="mt-[4px] text-[12px] xl:leading-loose">{data.phones.text}</p>
       </div>
-      <address className="ml-[16px] flex gap-[20px] not-italic">
+      <address className="flex items-center gap-[20px] not-italic smOnly:ml-[16px]">
         <a className="contacts-link" href={data.email.href}>
           {data.email.label}
         </a>

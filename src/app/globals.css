@@ -133,7 +133,7 @@ p {
     auto 247px,
     auto 247px,
     cover;
-  background-position: top, bottom, top, top;
+  background-position: top, bottom, top, center;
 
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
     linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
@@ -144,8 +144,9 @@ p {
     );
 
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
       image-set(
         url('/images/contacts/contacts_md@1x.webp') 1x,
         url('/images/contacts/contacts_md@2x.webp') 2x
@@ -154,16 +155,14 @@ p {
 
   @media screen and (min-width: 1280px) {
     background-size:
-      auto 257px,
-      auto 257px,
       cover,
+      auto 293px,
+      auto 293px,
       cover;
 
-    background-position: bottom, top, top, top;
-
-    background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    background-image: (rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
       linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       image-set(
         url('/images/contacts/contacts_lg@1x.webp') 1x,
         url('/images/contacts/contacts_lg@2x.webp') 2x
