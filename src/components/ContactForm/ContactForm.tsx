@@ -10,6 +10,7 @@ import ErrorMsg from '@/components/ui/ErrorMsg';
 const ContactForm = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({

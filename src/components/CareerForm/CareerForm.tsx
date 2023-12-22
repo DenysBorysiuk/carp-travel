@@ -1,78 +1,54 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
+import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FormBtn from '@/components/ui/FormBtn';
 import { schema } from './schema';
-import { FormData } from './type';
-import ErrorMsg from '@/components/ui/ErrorMsg';
+
+import TextArea from '../ui/TextArea';
+import Field from '../ui/Field';
+
+import data from '@/data/career.json';
 
 const CareerForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>({
-    resolver: yupResolver(schema),
+  } = useForm<FieldValues>({
+    resolver: yupResolver(schema) as FieldValues | any,
   });
 
-  const onSubmit = (data: FormData) => console.log(data);
+  const onSubmit = (data: FieldValues) => console.log(data);
 
   return (
-    <form className="md:h-[592px] md:w-[704px]" onSubmit={handleSubmit(onSubmit)}>
-      <div className="md:flex ">
+    <form className="" onSubmit={handleSubmit(onSubmit)}>
+      <div className="md:flex md:gap-[24px]">
         <ul className="flex flex-col gap-[24px] xl:flex-row">
-          <li className="relative">
-            <label
-              className="mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px] outline-none "
-              htmlFor="name"
-            >
-              Full name
-            </label>
-            <input
-              className={`block h-[24px] w-full bg-white/5 px-[8px] font-extralight outline-none
-              placeholder:text-[13px] placeholder:text-white/20 md:w-[221px] xl:h-[28px] xl:w-[293px] xl:text-[20px]
-               ${errors.name ? 'text-error' : ''}`}
-              {...register('name')}
-              placeholder="John Smith"
-              id="name"
-            />
-            {errors.name && <ErrorMsg>{errors.name.message}</ErrorMsg>}
-          </li>
-          <li className="relative">
-            <label
-              className="mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]"
-              htmlFor="email"
-            >
-              E-mail
-            </label>
-            <input
-              className={`block h-[24px] w-full bg-white/5 px-[8px] font-extralight outline-none 
-              placeholder:text-[13px] placeholder:text-white/20 md:w-[221px] xl:h-[28px] xl:w-[293px] xl:text-[20px]
-               ${errors.name ? 'text-error' : ''}`}
-              {...register('email')}
-              placeholder="support@carptravel.com"
-              id="email"
-            />
-            {errors.email && <ErrorMsg>{errors.email.message}</ErrorMsg>}
-          </li>
+          {data.form.inputs.map(input => (
+            <li key={input.id}>
+              <Field
+                {...input}
+                className="md:w-[222px] xl:w-[290px]"
+                register={register}
+                errors={errors}
+              />
+            </li>
+          ))}
         </ul>
-        <div>
-          <label
-            className="mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]"
-            htmlFor="message"
-          >
-            Message
-          </label>
-          <textarea
-            className="block h-[193px] w-full resize-none bg-white/5 px-[8px] outline-none 
-            md:h-[221px] md:w-[464px] xl:h-[174px] xl:w-[607px]"
-            {...register('message')}
-            id="message"
-          />
-        </div>
+        <TextArea
+          className="h-[196px] md:h-[268px] md:w-[221px] xl:h-[268px] xl:w-[292px]"
+          register={register}
+        />
       </div>
-      <FormBtn />
+      {/* <div>
+        <input {...register('approvesTutorial')} id="approves-tutorial" type="checkbox" />
+        <label htmlFor="approves-tutorial">Do you approve this tutorial?</label>
+        {errors.approvesTutorial && (
+          <p className="error-message">{errors.approvesTutorial.message}</p>
+        )}
+      </div> */}
+      {/* <FormBtn /> */}
     </form>
   );
 };

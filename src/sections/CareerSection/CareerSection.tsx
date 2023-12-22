@@ -13,21 +13,22 @@ const CareerSection = () => {
             {data.text1}
           </p>
         </div>
-        <div>
-          <h3
-            className="mb-[36px] ml-[100px] text-[30px] font-extralight uppercase leading-[1.21] 
+
+        <h3
+          className="mb-[36px] ml-[100px] text-[30px] font-extralight uppercase leading-[1.21] 
             md:mb-[56px] md:ml-[80px] xl:ml-[123px] xl:text-[36px] xl:leading-none"
-          >
-            {data.subtitle}
-          </h3>
+        >
+          {data.subtitle}
+        </h3>
+        <div className="md:flex md:gap-[20px]">
           <CareerList />
-        </div>
-        <div>
-          <p className="mb-[24px] ml-auto w-[179px] md:w-[221px]">
-            {data.text2[0]}
-            <span className="block">{data.text2[1]}</span>
-          </p>
-          <CareerForm />
+          <div>
+            <p className="mb-[24px] block w-[179px] md:w-[221px] smOnly:ml-auto">
+              {data.text2[0]}
+              <span className="block">{data.text2[1]}</span>
+            </p>
+            <CareerForm />
+          </div>
         </div>
       </div>
     </section>
