@@ -7,7 +7,7 @@ import { schema } from './schema';
 import { FormData } from './type';
 import ErrorMsg from '@/components/ui/ErrorMsg';
 
-const ContactForm = () => {
+const CareerForm = () => {
   const {
     register,
     handleSubmit,
@@ -19,8 +19,8 @@ const ContactForm = () => {
   const onSubmit = (data: FormData) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-[16px] flex flex-col gap-[24px] md:gap-[20px] xl:mb-[24px] xl:gap-[40px] mdOnly:flex-row">
+    <form className="md:h-[592px] md:w-[704px]" onSubmit={handleSubmit(onSubmit)}>
+      <div className="md:flex ">
         <ul className="flex flex-col gap-[24px] xl:flex-row">
           <li className="relative">
             <label
@@ -77,4 +77,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default CareerForm;

@@ -9,6 +9,10 @@
   @apply box-border;
 }
 
+/* input:focus {
+  outline: none
+} */
+
 html {
   @apply scroll-smooth;
 }

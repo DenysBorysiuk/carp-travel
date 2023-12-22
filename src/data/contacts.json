@@ -41,5 +41,9 @@
         "href": "https://www.tiktok.com/"
       }
     ]
+  },
+  "form": {
+    "inputs": [],
+    "textarea": {}
   }
 }
