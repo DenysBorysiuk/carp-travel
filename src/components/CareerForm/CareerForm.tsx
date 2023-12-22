@@ -24,7 +24,7 @@ const CareerForm = () => {
   return (
     <form className="" onSubmit={handleSubmit(onSubmit)}>
       <div className="md:flex md:gap-[24px]">
-        <ul className="flex flex-col gap-[24px] xl:flex-row">
+        <ul className="flex flex-col gap-[24px]">
           {data.form.inputs.map(input => (
             <li key={input.id}>
               <Field
@@ -48,7 +48,7 @@ const CareerForm = () => {
           <p className="error-message">{errors.approvesTutorial.message}</p>
         )}
       </div> */}
-      {/* <FormBtn /> */}
+      <FormBtn />
     </form>
   );
 };
