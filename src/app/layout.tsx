@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Karantina } from 'next/font/google';
 import './globals.css';
 import Header from '@/sections/Header';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${karantina.variable}`}>
         {/* <Header /> */}
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

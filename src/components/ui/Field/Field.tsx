@@ -1,4 +1,4 @@
-import FieldError from '../FieldError';
+import FieldError from '@/components/ui/FieldError';
 import { FieldProps } from './type';
 
 const Field = ({ className, id, type, name, label, placeholder, register, errors }: FieldProps) => {
@@ -19,7 +19,6 @@ const Field = ({ className, id, type, name, label, placeholder, register, errors
         type={type}
         id={id}
       />
-
       {errors[name] && <FieldError errors={errors} name={name} />}
     </div>
   );

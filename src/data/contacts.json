@@ -43,7 +43,26 @@
     ]
   },
   "form": {
-    "inputs": [],
-    "textarea": {}
+    "inputs": [
+      {
+        "id": "userName",
+        "type": "text",
+        "name": "userName",
+        "label": "Full name",
+        "placeholder": "John Smith"
+      },
+      {
+        "id": "email",
+        "type": "text",
+        "name": "email",
+        "label": "E-mail",
+        "placeholder": "johnsmith@email.com"
+      }
+    ],
+    "textarea": {
+      "id": "message",
+      "name": "message",
+      "label": "Message"
+    }
   }
 }

@@ -1,25 +1,24 @@
 'use client';
 
-import { useForm, FieldValues } from 'react-hook-form';
+import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FormBtn from '@/components/ui/FormBtn';
-import { schema } from './schema';
-
-import TextArea from '../ui/TextArea';
-import Field from '../ui/Field';
-
+import TextArea from '@/components/ui/TextArea';
+import Field from '@/components/ui/Field';
 import data from '@/data/career.json';
+import { schema } from './schema';
 
 const CareerForm = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<FieldValues>({
     resolver: yupResolver(schema) as FieldValues | any,
   });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  const onSubmit: SubmitHandler<FieldValues> = async data => console.log(data);
 
   return (
     <form className="" onSubmit={handleSubmit(onSubmit)}>
