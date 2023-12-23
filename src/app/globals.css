@@ -119,23 +119,46 @@ p {
 
 /* Career */
 .career-bg {
-  background-image: image-set(
-    url('/images/career/career_xs@1x.webp') 1x,
-    url('/images/career/career_xs@2x.webp') 2x
-  );
+  background-repeat: no-repeat;
+  background-position:
+    top,
+    bottom,
+    top,
+    top center;
+  background-size:
+    cover,
+    auto 247px,
+    auto 247px,
+    cover;
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    image-set(
+      url('/images/career/career_xs@1x.webp') 1x,
+      url('/images/career/career_xs@2x.webp') 2x
+    );
 
   @media screen and (min-width: 480px) {
-    background-image: image-set(
-      url('/images/career/career_sm@1x.webp') 1x,
-      url('/images/career/career_sm@2x.webp') 2x
-    );
+    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+      image-set(
+        url('/images/career/career_sm@1x.webp') 1x,
+        url('/images/career/career_sm@2x.webp') 2x
+      );
   }
 
   @media screen and (min-width: 768px) {
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: top, bottom, top, center;
+    background-size:
+      cover,
+      auto 247px,
+      auto 247px,
+      cover;
 
     background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
       image-set(
         url('/images/career/career_md@1x.webp') 1x,
         url('/images/career/career_md@2x.webp') 2x
@@ -143,8 +166,8 @@ p {
   }
 
   @media screen and (min-width: 1280px) {
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
       image-set(

@@ -4,7 +4,7 @@ const CareerList = () => {
   return (
     <ul
       className=" flex w-[181px] flex-col gap-[16px] md:w-[225px] md:gap-[24px] xl:mt-[87px] 
-    xl:w-[562px] smOnly:mb-[112px]"
+    xl:w-[562px] "
     >
       {data.description.map(item => (
         <li className="text-right xl:flex xl:gap-[24px]" key={item.title}>
