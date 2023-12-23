@@ -10,6 +10,9 @@ import FormBtn from '@/components/ui/FormBtn';
 import data from '@/data/contacts.json';
 import { schema } from './schema';
 
+const { form } = data;
+const { inputs, textarea } = form;
+
 const ContactForm = () => {
   const {
     register,
@@ -34,7 +37,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-[16px] flex flex-col gap-[24px] md:gap-[20px] xl:mb-[24px] xl:gap-[40px] mdOnly:flex-row">
         <ul className="flex flex-col gap-[24px] xl:flex-row">
-          {data.form.inputs.map(input => (
+          {inputs.map(input => (
             <li key={input.id}>
               <Field
                 {...input}
@@ -46,7 +49,7 @@ const ContactForm = () => {
           ))}
         </ul>
         <TextArea
-          {...data.form.textarea}
+          {...textarea}
           className="h-[193px] md:h-[221px] md:w-[464px] xl:h-[174px] xl:w-[607px]"
           register={register}
         />

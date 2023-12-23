@@ -5,7 +5,7 @@ import data from '@/data/career.json';
 
 const CareerSection = () => {
   return (
-    <section className="" id="career">
+    <section className="career-bg" id="career">
       <div className="container xl:relative">
         <div className="mb-[36px] md:mb-[5px] md:flex md:gap-[115px] xl:mb-[24px] xl:gap-[400px]">
           <SectionTitle className={'smOnly:mb-[24px]'} data={data.title} />

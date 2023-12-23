@@ -11,9 +11,9 @@ export default function Home() {
       {/* <HeroSection /> */}
       {/* <AboutSection /> */}
       {/* <ServicesSection /> */}
-      {/* <CareerSection /> */}
+      <CareerSection />
       {/* <GallerySection /> */}
-      <ContactsSection />
+      {/* <ContactsSection /> */}
     </>
   );
 }

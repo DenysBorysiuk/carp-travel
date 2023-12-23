@@ -6,7 +6,6 @@ export type FieldProps = {
   type: string;
   name: string;
   label: string;
-  placeholder?: string;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
 };
