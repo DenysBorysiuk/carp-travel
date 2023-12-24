@@ -3,7 +3,7 @@ import data from '@/data/gallery.json';
 
 const GallerySection = () => {
   return (
-    <section className="" id="gallery">
+    <section className="gallery-bg h-[800px]" id="gallery">
       <div className="container">
         <SectionTitle className={''} data={data.title} />
       </div>

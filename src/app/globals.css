@@ -156,11 +156,6 @@ p {
 
   @media screen and (min-width: 768px) {
     background-position: top, bottom, top, center;
-    background-size:
-      cover,
-      auto 247px,
-      auto 247px,
-      cover;
 
     background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
       linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
@@ -179,6 +174,51 @@ p {
       image-set(
         url('/images/career/career_md@1x.webp') 1x,
         url('/images/career/career_md@2x.webp') 2x
+      );
+  }
+}
+
+/* Gallery */
+.gallery-bg {
+  background-repeat: no-repeat;
+  background-size:
+    cover,
+    auto 247px,
+    auto 247px,
+    cover;
+  background-position: top, bottom, top, center;
+
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    image-set(
+      url('/images/gallery/gallery-bg_sm@1x.webp') 1x,
+      url('/images/gallery/gallery-bg_sm@2x.webp') 2x
+    );
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.85), rgba(2, 15, 8, 0.85)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+      image-set(
+        url('/images/gallery/gallery-bg_md@1x.webp') 1x,
+        url('/images/gallery/gallery-bg_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-size:
+      cover,
+      auto 303px,
+      auto 303px,
+      cover;
+
+    background-image: linear-gradient(rgba(2, 15, 8, 0.85), rgba(2, 15, 8, 0.85)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
+      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+      image-set(
+        url('/images/gallery/gallery-bg_lg@1x.webp') 1x,
+        url('/images/gallery/gallery-bg_lg@2x.webp') 2x
       );
   }
 }
