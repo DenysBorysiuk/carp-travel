@@ -33,14 +33,14 @@ p {
 
 /* hero */
 
-.frame:before {
+.frame::before {
   content: '';
   @apply absolute left-0 h-[53px] w-[42px] bg-[url('/icons/frame-l_sm.svg')];
   @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-l_md.svg')];
   @apply xl:h-[71px] xl:w-[44px] xl:bg-[url('/icons/frame-l_lg.svg')];
 }
 
-.frame:after {
+.frame::after {
   content: '';
   @apply absolute right-0 h-[53px] w-[42px] bg-[url('/icons/frame-r_sm.svg')];
   @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-r_md.svg')];
@@ -119,7 +119,7 @@ p {
 
 /* Career */
 
-.checkbox:before {
+.checkbox::before {
   content: '';
   @apply absolute left-0 h-[22px] w-[22px] xl:h-[24px] xl:w-[24px];
 }

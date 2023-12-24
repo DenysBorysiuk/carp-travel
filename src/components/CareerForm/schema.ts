@@ -5,7 +5,11 @@ export const schema = yup
     userName: yup.string().required('name is required').min(3, 'min 3 characters'),
     email: yup.string().required('email is required').email('Invalid email'),
     position: yup.string(),
-    phone: yup.string().required('phone is required'),
+    phone: yup
+      .string()
+      .matches(/^\d+$/, 'Must be only digits')
+      .min(6, 'Too Short!')
+      .required('phone is required'),
     confirm: yup.boolean().required('confirm is required').oneOf([true], 'Must be confirmed.'),
     message: yup.string(),
   })

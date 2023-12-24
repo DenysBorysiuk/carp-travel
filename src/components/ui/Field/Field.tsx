@@ -12,7 +12,8 @@ const Field = ({ className, id, type, name, label, placeholder, register, errors
       </label>
       <input
         className={`block h-[24px] w-full bg-white/5 px-[8px] font-extralight outline-none
-              placeholder:text-[13px] placeholder:text-white/20 md:h-[24px] xl:h-[28px] xl:text-[20px]
+              placeholder:text-[13px] placeholder:text-white/20  md:h-[24px] xl:h-[28px]
+               xl:text-[20px]
               ${className} ${errors[name] ? 'text-error' : ''}`}
         {...register(name)}
         placeholder={placeholder}
