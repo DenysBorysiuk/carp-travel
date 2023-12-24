@@ -2,5 +2,31 @@
   "title": {
     "text": "Our",
     "textAccent": "gallery"
-  }
+  },
+  "slides": [
+    {
+      "img": "/images/gallery/gallery-1_lg@2x.webp",
+      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+    },
+    {
+      "img": "/images/gallery/gallery-2_lg@2x.webp",
+      "alt": "breathtaking view lake high carpathian mountains"
+    },
+    {
+      "img": "/images/gallery/gallery-3_lg@2x.webp",
+      "alt": "carpathian mountain's forest"
+    },
+    {
+      "img": "/images/gallery/gallery-1_lg@2x.webp",
+      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+    },
+    {
+      "img": "/images/gallery/gallery-2_lg@2x.webp",
+      "alt": "breathtaking view lake high carpathian mountains"
+    },
+    {
+      "img": "/images/gallery/gallery-3_lg@2x.webp",
+      "alt": "carpathian mountain's forest"
+    }
+  ]
 }

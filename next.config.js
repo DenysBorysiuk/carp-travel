@@ -8,8 +8,8 @@ const nextConfig = {
     return config;
   },
   images: {
-    deviceSizes: [480, 768, 1440, 1920],
     formats: ['image/webp'],
+    deviceSizes: [480, 768, 1280, 1440, 1920],
   },
 };
 
