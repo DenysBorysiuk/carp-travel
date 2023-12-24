@@ -118,6 +118,12 @@ p {
 }
 
 /* Career */
+
+.checkbox:before {
+  content: '';
+  @apply absolute left-0 h-[22px] w-[22px]  md:h-[24px] md:w-[24px];
+}
+
 .career-bg {
   background-repeat: no-repeat;
   background-position:

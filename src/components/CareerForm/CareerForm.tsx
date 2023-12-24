@@ -62,7 +62,7 @@ const CareerForm = ({ className }: CareerFormProps) => {
           />
         </div>
         <div className="md:flex md:items-baseline">
-          <CheckBox {...checkbox} className="w-[222px]" register={register} errors={errors} />
+          <CheckBox {...checkbox} register={register} errors={errors} isChecked={watch().confirm} />
           <FormBtn />
         </div>
       </form>

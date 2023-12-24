@@ -61,7 +61,6 @@
       "label": "Message"
     },
     "checkbox": {
-      "id": "i01",
       "type": "checkbox",
       "name": "confirm",
       "label": "I confirm my consent to the processing of personal data."
