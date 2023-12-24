@@ -9,7 +9,7 @@ const nextConfig = {
   },
   images: {
     formats: ['image/webp'],
-    deviceSizes: [480, 768, 1280, 1440, 1920],
+    deviceSizes: [280, 480, 768, 1280, 1440, 1920],
   },
 };
 

@@ -2,52 +2,56 @@
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, EffectCoverflow } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import data from '@/data/gallery.json';
+import { useState } from 'react';
 
 const GallerySlider = () => {
+  // const [activeSlide, setActiveSlide] = useState(0);
+
   return (
-    <div className="flex h-[609px] w-full flex-col md:h-[306px] md:flex-row">
-      <Swiper
-        wrapperTag="ul"
-        modules={[Navigation]}
-        navigation={{
-          nextEl: '.button-next',
-          prevEl: '.button-prev',
-        }}
-        spaceBetween={24}
-        loop={true}
-        slidesPerView={3}
-        // onSlideChange={swiper => console.log(swiper)}
-        breakpoints={{
-          320: {
-            direction: 'vertical',
-          },
-          768: {
-            direction: 'horizontal',
-          },
-          1280: {},
-        }}
-      >
-        {data.slides.map(({ img, alt }, idx) => (
-          <SwiperSlide tag="li" key={idx}>
-            <div className="h-[187px]  w-full">
+    <Swiper
+      className="h-[609px] md:h-[294px] xl:h-[294px]"
+      wrapperTag="ul"
+      modules={[Navigation, EffectCoverflow]}
+      direction={'vertical'}
+      slidesPerView={3}
+      spaceBetween={24}
+      loop={true}
+      navigation={{
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }}
+      // onSlideChange={swiper => console.log(swiper)}
+      // onSlideChange={args => setActiveSlide(args.activeIndex + 1)}
+      // initialSlide={0}
+      breakpoints={{
+        768: {
+          direction: 'horizontal',
+        },
+        1280: {},
+      }}
+    >
+      {data.slides.map(({ img, alt }, idx) => (
+        <SwiperSlide tag="li" key={idx}>
+          {({ isActive }) => (
+            <div className={`relative h-[187px]`}>
               <Image
                 src={img}
                 alt={alt}
-                height={187}
-                width={280}
-                // fill
-                // sizes="(max-width: 480px) 280px, (max-width: 1279px) 342px, 596px"
-                //   quality={90}
+                fill
+                sizes="(max-width: 480px) 280px, (max-width: 1279px) 342px, 596px"
+                quality={90}
                 priority
+                // className={``}
               />
+              {/* {console.log(isActive)} */}
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+          )}
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

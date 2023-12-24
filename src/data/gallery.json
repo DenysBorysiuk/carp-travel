@@ -6,27 +6,33 @@
   "slides": [
     {
       "img": "/images/gallery/gallery-1_lg@2x.webp",
-      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky",
+      "number": 1
     },
     {
       "img": "/images/gallery/gallery-2_lg@2x.webp",
-      "alt": "breathtaking view lake high carpathian mountains"
+      "alt": "breathtaking view lake high carpathian mountains",
+      "number": 2
     },
     {
       "img": "/images/gallery/gallery-3_lg@2x.webp",
-      "alt": "carpathian mountain's forest"
+      "alt": "carpathian mountain's forest",
+      "number": 3
     },
     {
       "img": "/images/gallery/gallery-1_lg@2x.webp",
-      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+      "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky",
+      "number": 4
     },
     {
       "img": "/images/gallery/gallery-2_lg@2x.webp",
-      "alt": "breathtaking view lake high carpathian mountains"
+      "alt": "breathtaking view lake high carpathian mountains",
+      "number": 5
     },
     {
       "img": "/images/gallery/gallery-3_lg@2x.webp",
-      "alt": "carpathian mountain's forest"
+      "alt": "carpathian mountain's forest",
+      "number": 6
     }
   ]
 }
