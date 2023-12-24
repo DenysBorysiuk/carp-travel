@@ -6,7 +6,7 @@ export const schema = yup
     email: yup.string().required('email is required').email('Invalid email'),
     position: yup.string(),
     phone: yup.string().required('phone is required'),
-    confirm: yup.boolean().required(),
+    confirm: yup.boolean().required('confirm is required').oneOf([true], 'Must be confirmed.'),
     message: yup.string(),
   })
   .required();

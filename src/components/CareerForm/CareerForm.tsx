@@ -42,8 +42,8 @@ const CareerForm = ({ className }: CareerFormProps) => {
         <span className="block">{data.text2[1]}</span>
       </p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-[16px] md:mb-[9px] md:flex md:gap-[24px]">
-          <ul className="flex flex-col gap-[16px] xl:gap-[26px] smOnly:mb-[16px]">
+        <div className="mb-[16px] md:mb-[9px] md:flex md:gap-[24px] xl:mb-[24px]">
+          <ul className="flex flex-col gap-[16px] xl:gap-[24px] smOnly:mb-[16px]">
             {inputs.map(input => (
               <li key={input.id}>
                 <Field

@@ -121,7 +121,7 @@ p {
 
 .checkbox:before {
   content: '';
-  @apply absolute left-0 h-[22px] w-[22px]  md:h-[24px] md:w-[24px];
+  @apply absolute left-0 h-[22px] w-[22px] xl:h-[24px] xl:w-[24px];
 }
 
 .career-bg {
