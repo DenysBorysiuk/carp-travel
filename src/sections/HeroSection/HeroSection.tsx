@@ -3,7 +3,7 @@ import data from '@/data/hero.json';
 
 const HeroSection = () => {
   return (
-    <section className=" hero-bg pt-[105px] md:pt-[121px] xl:pt-[130px]">
+    <section className="hero-bg pt-[105px] md:pt-[121px] xl:pt-[130px]">
       <div
         className="container flex flex-col flex-wrap md:h-[345px] md:gap-x-[48px]
         xl:h-[529px] xl:gap-x-[281px] smOnly:gap-[24px]"

@@ -8,12 +8,12 @@ import ContactsSection from '@/sections/ContactsSection';
 export default function Home() {
   return (
     <>
-      {/* <HeroSection /> */}
-      {/* <AboutSection /> */}
+      {/* <HeroSection />
+      <AboutSection /> */}
       <ServicesSection />
-      {/* <CareerSection /> */}
-      {/* <GallerySection /> */}
-      {/* <ContactsSection /> */}
+      {/* <CareerSection />
+      <GallerySection />
+      <ContactsSection /> */}
     </>
   );
 }
