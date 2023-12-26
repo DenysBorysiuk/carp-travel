@@ -34,7 +34,7 @@ const GallerySlider = () => {
           <SwiperSlide tag="li" key={idx} className="relative">
             {({ isActive }) => (
               <div
-                className={`image-wrapper relative h-[187px] transition-all duration-300 ease-in-out
+                className={`image-wrapper relative h-[187px] transition-all duration-300 ease-[cubic-bezier(.57,.21,.69,1.25)]
                 ${
                   isActive
                     ? 'before:hidden md:h-[294px] md:w-[415px] xl:h-[429px] xl:w-[606px]'
@@ -45,7 +45,7 @@ const GallerySlider = () => {
                   src={img}
                   alt={alt}
                   fill
-                  sizes="(max-width: 480px) 280px, (max-width: 1279px) 342px, 596px"
+                  sizes="(max-width: 480px) 280px, (max-width: 1279px) 342px, 606px"
                   quality={90}
                   priority
                 />
@@ -54,6 +54,17 @@ const GallerySlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="absolute bottom-0 left-[69px] z-10 xl:left-[235px] smOnly:hidden">
+        <button
+          className="button-prev mr-[459px] text-[33px] font-thin uppercase xl:mr-[651px]"
+          type="button"
+        >
+          prev
+        </button>
+        <button className="button-next text-[33px] font-thin uppercase" type="button">
+          next
+        </button>
+      </div>
     </div>
   );
 };
