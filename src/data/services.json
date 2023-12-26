@@ -2,5 +2,53 @@
   "title": {
     "text": "We",
     "textAccent": "offer"
-  }
+  },
+  "slides": [
+    {
+      "bg": "services-bg-1",
+      "img": {
+        "href": "/images/services/services-1_lg@2x.webp",
+        "alt": "ATVs Traveling"
+      },
+      "slogan": "Feel the adrenaline rush",
+      "text": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+    },
+    {
+      "bg": "services-bg-2",
+      "img": {
+        "href": "/images/services/services-2_lg@2x.webp",
+        "alt": "Rock climbing"
+      },
+      "slogan": "Destroy your limitations",
+      "text": "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks."
+    },
+    {
+      "bg": "services-bg-3",
+      "img": {
+        "href": "/images/services/services-3_lg@2x.webp",
+        "alt": "Hot air ballooning"
+      },
+      "slogan": "Get Inspired",
+      "text": "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless."
+    },
+    {
+      "bg": "services-bg-4",
+      "img": {
+        "href": "/images/services/services-4_lg@2x.webp",
+        "alt": "Skydiving"
+      },
+      "slogan": "Overcome your fears",
+      "text": "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever."
+    },
+    {
+      "bg": "services-bg-5",
+      "img": {
+        "href": "/images/services/services-5_lg@2x.webp",
+        "alt": "Rafting"
+      },
+      "slogan": "Trust the flow",
+      "text": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+    }
+  ],
+  "list": ["ATVs Traveling", "Rock climbing", "Hot air ballooning", "Skydiving", "Rafting"]
 }

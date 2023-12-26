@@ -117,6 +117,57 @@ p {
   }
 }
 
+/* Services */
+.services-bg-1 {
+  background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(
+      url('/images/services/services-bg-1_sm@1x.webp') 1x,
+      url('/images/services/services-bg-1_sm@2x.webp') 2x
+    );
+}
+
+.services-bg-2 {
+  background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(
+      url('/images/services/services-bg-2_sm@1x.webp') 1x,
+      url('/images/services/services-bg-2_sm@2x.webp') 2x
+    );
+}
+
+.services-bg-3 {
+  background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(
+      url('/images/services/services-bg-3_sm@1x.webp') 1x,
+      url('/images/services/services-bg-3_sm@2x.webp') 2x
+    );
+}
+
+.services-bg-4 {
+  background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(
+      url('/images/services/services-bg-4_sm@1x.webp') 1x,
+      url('/images/services/services-bg-4_sm@2x.webp') 2x
+    );
+}
+
+.services-bg-5 {
+  background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    image-set(
+      url('/images/services/services-bg-5_sm@1x.webp') 1x,
+      url('/images/services/services-bg-5_sm@2x.webp') 2x
+    );
+}
+
 /* Career */
 
 .checkbox::before {
@@ -179,6 +230,57 @@ p {
 }
 
 /* Gallery */
+.gallery .swiper-wrapper {
+  width: 100%;
+  align-items: center;
+}
+
+.gallery .swiper-slide {
+  opacity: 0;
+}
+
+.gallery .swiper-slide-next,
+.gallery .swiper-slide-prev {
+  height: 187px !important;
+  opacity: 1;
+
+  @media screen and (min-width: 768px) {
+    width: 121px !important;
+    height: 87px !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 313px !important;
+    height: 225px !important;
+  }
+}
+
+.gallery .swiper-slide-active {
+  height: 187px !important;
+  opacity: 1;
+
+  @media screen and (min-width: 768px) {
+    width: 415px !important;
+    height: 294px !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 606px !important;
+    height: 429px !important;
+  }
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 15, 8, 0.75);
+  z-index: 1;
+}
+
 .gallery-bg {
   background-repeat: no-repeat;
   background-size:
@@ -270,55 +372,4 @@ p {
         url('/images/contacts/contacts_lg@2x.webp') 2x
       );
   }
-}
-
-.gallery .swiper-wrapper {
-  width: 100%;
-  align-items: center;
-}
-
-.gallery .swiper-slide {
-  opacity: 0;
-}
-
-.gallery .swiper-slide-next,
-.gallery .swiper-slide-prev {
-  height: 187px !important;
-  opacity: 1;
-
-  @media screen and (min-width: 768px) {
-    width: 121px !important;
-    height: 87px !important;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 313px !important;
-    height: 225px !important;
-  }
-}
-
-.gallery .swiper-slide-active {
-  height: 187px !important;
-  opacity: 1;
-
-  @media screen and (min-width: 768px) {
-    width: 415px !important;
-    height: 294px !important;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 606px !important;
-    height: 429px !important;
-  }
-}
-
-.image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(2, 15, 8, 0.75);
-  z-index: 1;
 }
