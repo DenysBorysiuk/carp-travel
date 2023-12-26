@@ -54,7 +54,7 @@ const GallerySlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-0 left-[69px] z-10 xl:left-[235px] smOnly:hidden">
+      <div className="absolute bottom-0 left-[75px] z-10 xl:left-[235px] smOnly:hidden">
         <button
           className="button-prev mr-[459px] text-[33px] font-thin uppercase xl:mr-[651px]"
           type="button"
