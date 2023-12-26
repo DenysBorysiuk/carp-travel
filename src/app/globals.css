@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Common styles */
+:root {
+  --full-50-gradient: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5));
+  --full-75-gradient: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
+  --full-85-gradient: linear-gradient(rgba(2, 15, 8, 0.85), rgba(2, 15, 8, 0.85));
+  --to-top-50-gradient: linear-gradient(to top, rgba(0, 24, 38, 0.5), rgba(0, 37, 49, 0));
+  --to-top-75-gradient: linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0));
+  --to-bottom-50-gradient: linear-gradient(to bottom, rgba(0, 24, 38, 0.5), rgba(0, 37, 49, 0));
+  --to-bottom-75-gradient: linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0));
+}
+
+/**
+  |============================
+  | Common
+  |============================
+*/
+
 *,
 :after,
 :before {
@@ -31,20 +46,26 @@ p {
   @apply font-extralight md:text-[16px] md:leading-[1.25] xl:text-[18px] xl:leading-[1.33];
 }
 
-/* hero */
+/**
+  |============================
+  | Hero
+  |============================
+*/
+
+.frame::before,
+.frame::after {
+  content: '';
+  @apply absolute h-[53px] w-[42px] md:h-[50px] md:w-[35px] xl:h-[71px] xl:w-[44px];
+}
 
 .frame::before {
-  content: '';
-  @apply absolute left-0 h-[53px] w-[42px] bg-[url('/icons/frame-l_sm.svg')];
-  @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-l_md.svg')];
-  @apply xl:h-[71px] xl:w-[44px] xl:bg-[url('/icons/frame-l_lg.svg')];
+  @apply left-0 bg-[url('/icons/frame-l_sm.svg')] md:bg-[url('/icons/frame-l_md.svg')] 
+  xl:bg-[url('/icons/frame-l_lg.svg')];
 }
 
 .frame::after {
-  content: '';
-  @apply absolute right-0 h-[53px] w-[42px] bg-[url('/icons/frame-r_sm.svg')];
-  @apply md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-r_md.svg')];
-  @apply xl:h-[71px] xl:w-[44px] xl:bg-[url('/icons/frame-r_lg.svg')];
+  @apply right-0 bg-[url('/icons/frame-r_sm.svg')] md:bg-[url('/icons/frame-r_md.svg')] 
+  xl:bg-[url('/icons/frame-r_lg.svg')];
 }
 
 .hero-bg {
@@ -54,13 +75,16 @@ p {
     cover,
     cover;
 
-  background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    image-set(url('/images/hero/hero_sm@1x.webp') 1x, url('/images/hero/hero_sm@2x.webp') 2x);
+  background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
+    image-set(url('/images/hero/hero_xs@1x.webp') 1x, url('/images/hero/hero_xs@2x.webp') 2x);
 
-  @media screen and (min-width: 481px) {
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+  @media screen and (min-width: 480px) {
+    background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
+      image-set(url('/images/hero/hero_sm@1x.webp') 1x, url('/images/hero/hero_sm@2x.webp') 2x);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
       image-set(url('/images/hero/hero_md@1x.webp') 1x, url('/images/hero/hero_md@2x.webp') 2x);
   }
 
@@ -70,13 +94,16 @@ p {
       cover,
       cover;
 
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.5), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    background-image: var(--to-bottom-50-gradient), var(--full-50-gradient),
       image-set(url('/images/hero/hero_lg@1x.webp') 1x, url('/images/hero/hero_lg@2x.webp') 2x);
   }
 }
 
-/* About */
+/**
+  |============================
+  | About
+  |============================
+*/
 
 .about-bg {
   background-repeat: no-repeat;
@@ -85,19 +112,16 @@ p {
     cover,
     cover;
 
-  background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+  background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
     image-set(url('/images/about/about_xs@1x.webp') 1x, url('/images/about/about_xs@2x.webp') 2x);
 
   @media screen and (min-width: 480px) {
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
       image-set(url('/images/about/about_sm@1x.webp') 1x, url('/images/about/about_sm@2x.webp') 2x);
   }
 
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    background-image: var(--to-bottom-75-gradient), var(--full-50-gradient),
       image-set(url('/images/about/about_md@1x.webp') 1x, url('/images/about/about_md@2x.webp') 2x);
   }
 
@@ -110,14 +134,18 @@ p {
 
     background-position: bottom, top, top, top;
 
-    background-image: linear-gradient(180deg, rgba(0, 36, 38, 0), rgba(0, 37, 49, 0.5)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    background-image: var(--to-top-50-gradient), var(--to-bottom-75-gradient),
+      var(--full-50-gradient),
       image-set(url('/images/about/about_lg@1x.webp') 1x, url('/images/about/about_lg@2x.webp') 2x);
   }
 }
 
-/* Services */
+/**
+  |============================
+  | Services
+  |============================
+*/
+
 .services-bg-1,
 .services-bg-2,
 .services-bg-3,
@@ -130,60 +158,160 @@ p {
     auto 291px,
     auto 291px,
     cover;
+
+  @media screen and (min-width: 768px) {
+    background-size:
+      cover,
+      auto 247px,
+      auto 247px,
+      cover;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-size:
+      cover,
+      auto 241px,
+      auto 241px,
+      cover;
+  }
 }
 
 .services-bg-1 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-1_sm@1x.webp') 1x,
       url('/images/services/services-bg-1_sm@2x.webp') 2x
     );
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-1_md@1x.webp') 1x,
+        url('/images/services/services-bg-1_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-1_lg@1x.webp') 1x,
+        url('/images/services/services-bg-1_lg@2x.webp') 2x
+      );
+  }
 }
 
 .services-bg-2 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-2_sm@1x.webp') 1x,
       url('/images/services/services-bg-2_sm@2x.webp') 2x
     );
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-2_md@1x.webp') 1x,
+        url('/images/services/services-bg-2_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-2_lg@1x.webp') 1x,
+        url('/images/services/services-bg-2_lg@2x.webp') 2x
+      );
+  }
 }
 
 .services-bg-3 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-3_sm@1x.webp') 1x,
       url('/images/services/services-bg-3_sm@2x.webp') 2x
     );
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-3_md@1x.webp') 1x,
+        url('/images/services/services-bg-3_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-3_lg@1x.webp') 1x,
+        url('/images/services/services-bg-3_lg@2x.webp') 2x
+      );
+  }
 }
 
 .services-bg-4 {
   background-color: antiquewhite;
-  background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-4_sm@1x.webp') 1x,
       url('/images/services/services-bg-4_sm@2x.webp') 2x
     );
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-4_md@1x.webp') 1x,
+        url('/images/services/services-bg-4_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-4_lg@1x.webp') 1x,
+        url('/images/services/services-bg-4_lg@2x.webp') 2x
+      );
+  }
 }
 
 .services-bg-5 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-    linear-gradient(to top, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
-    linear-gradient(to bottom, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-5_sm@1x.webp') 1x,
       url('/images/services/services-bg-5_sm@2x.webp') 2x
     );
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-5_md@1x.webp') 1x,
+        url('/images/services/services-bg-5_md@2x.webp') 2x
+      );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: var(--full-50-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
+      image-set(
+        url('/images/services/services-bg-5_lg@1x.webp') 1x,
+        url('/images/services/services-bg-5_lg@2x.webp') 2x
+      );
+  }
 }
 
-/* Career */
+/**
+  |============================
+  | Career
+  |============================
+*/
 
 .checkbox::before {
   content: '';
@@ -192,28 +320,21 @@ p {
 
 .career-bg {
   background-repeat: no-repeat;
-  background-position:
-    top,
-    bottom,
-    top,
-    top center;
+  background-position: top, bottom, top, top;
   background-size:
     cover,
     auto 247px,
     auto 247px,
     cover;
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-75-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/career/career_xs@1x.webp') 1x,
       url('/images/career/career_xs@2x.webp') 2x
     );
 
   @media screen and (min-width: 480px) {
-    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-75-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/career/career_sm@1x.webp') 1x,
         url('/images/career/career_sm@2x.webp') 2x
@@ -223,9 +344,8 @@ p {
   @media screen and (min-width: 768px) {
     background-position: top, bottom, top, center;
 
-    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-75-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/career/career_md@1x.webp') 1x,
         url('/images/career/career_md@2x.webp') 2x
@@ -236,7 +356,7 @@ p {
     background-size: cover;
     background-position: center;
 
-    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    background-image: var(--full-75-gradient),
       image-set(
         url('/images/career/career_md@1x.webp') 1x,
         url('/images/career/career_md@2x.webp') 2x
@@ -244,7 +364,12 @@ p {
   }
 }
 
-/* Gallery */
+/**
+  |============================
+  | Gallery
+  |============================
+*/
+
 .gallery .swiper-wrapper {
   width: 100%;
   align-items: center;
@@ -305,18 +430,15 @@ p {
     cover;
   background-position: top, bottom, top, center;
 
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-75-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/gallery/gallery-bg_sm@1x.webp') 1x,
       url('/images/gallery/gallery-bg_sm@2x.webp') 2x
     );
 
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(rgba(2, 15, 8, 0.85), rgba(2, 15, 8, 0.85)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-85-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/gallery/gallery-bg_md@1x.webp') 1x,
         url('/images/gallery/gallery-bg_md@2x.webp') 2x
@@ -330,9 +452,8 @@ p {
       auto 303px,
       cover;
 
-    background-image: linear-gradient(rgba(2, 15, 8, 0.85), rgba(2, 15, 8, 0.85)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-85-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/gallery/gallery-bg_lg@1x.webp') 1x,
         url('/images/gallery/gallery-bg_lg@2x.webp') 2x
@@ -340,7 +461,12 @@ p {
   }
 }
 
-/* Contacts */
+/**
+  |============================
+  | Contacts
+  |============================
+*/
+
 .contacts-link {
   @apply text-[14px] font-normal leading-[1.71] md:text-[16px] md:leading-[1.5] xl:text-[18px] xl:leading-[1.33];
 }
@@ -354,18 +480,15 @@ p {
     cover;
   background-position: top, bottom, top, center;
 
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-    linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+  background-image: var(--full-75-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/contacts/contacts_sm@1x.webp') 1x,
       url('/images/contacts/contacts_sm@2x.webp') 2x
     );
 
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-75-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/contacts/contacts_md@1x.webp') 1x,
         url('/images/contacts/contacts_md@2x.webp') 2x
@@ -379,9 +502,8 @@ p {
       auto 293px,
       cover;
 
-    background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0), rgba(0, 37, 49, 0.75)),
-      linear-gradient(180deg, rgba(0, 24, 38, 0.75), rgba(0, 37, 49, 0)),
+    background-image: var(--full-75-gradient), var(--to-top-75-gradient),
+      var(--to-bottom-75-gradient),
       image-set(
         url('/images/contacts/contacts_lg@1x.webp') 1x,
         url('/images/contacts/contacts_lg@2x.webp') 2x
