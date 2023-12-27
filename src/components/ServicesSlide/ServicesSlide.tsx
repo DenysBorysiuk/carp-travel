@@ -28,9 +28,14 @@ const ServicesSlide = ({
         <div className="relative h-[213px] md:h-[370px] md:w-[463px] xl:h-[429px] xl:w-[607px] smOnly:mb-[12px]">
           <Image src={img.href} alt={img.alt} fill priority />
         </div>
-        <div className="md:w-[221px]">
-          <p className="mb-[24px] text-right text-[12px] leading-loose">{slogan}</p>
-          <div className="flex h-[320px] flex-col justify-between">
+        <div className="relative md:w-[221px]">
+          <p
+            className="text-[12px] leading-loose tracking-[2.4px] md:absolute md:top-[197px] 
+           xl:hidden smOnly:mb-[24px] smOnly:text-right"
+          >
+            {slogan}
+          </p>
+          <div className="flex h-[320px] flex-col justify-between md:h-[370px]">
             <ul className="flex flex-col gap-[16px]">
               {list.map((item, index) => (
                 <li key={item}>
@@ -50,7 +55,7 @@ const ServicesSlide = ({
                 </li>
               ))}
             </ul>
-            <p className="">{text}</p>
+            <p className="md:text-justify md:text-[13px] md:leading-[1.53]">{text}</p>
           </div>
         </div>
       </div>
