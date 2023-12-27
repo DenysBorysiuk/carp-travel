@@ -10,10 +10,10 @@ export default function Home() {
     <>
       {/* <HeroSection /> */}
       {/* <AboutSection /> */}
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       {/* <CareerSection /> */}
       {/* <GallerySection /> */}
-      <ContactsSection />
+      {/* <ContactsSection /> */}
     </>
   );
 }

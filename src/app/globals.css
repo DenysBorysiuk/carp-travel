@@ -46,6 +46,10 @@ p {
   @apply font-extralight md:text-[16px] md:leading-[1.25] xl:text-[18px] xl:leading-[1.33];
 }
 
+.anim {
+  @apply duration-300 ease-in-out;
+}
+
 /**
   |============================
   | Hero
@@ -145,6 +149,10 @@ p {
   | Services
   |============================
 */
+.btn::before {
+  content: '';
+  @apply absolute left-[-16px] h-[9px] w-[9px] bg-[url('/icons/bullet.svg')];
+}
 
 .services-bg-1,
 .services-bg-2,
@@ -255,7 +263,6 @@ p {
 }
 
 .services-bg-4 {
-  background-color: antiquewhite;
   background-image: var(--full-50-gradient), var(--to-top-75-gradient), var(--to-bottom-75-gradient),
     image-set(
       url('/images/services/services-bg-4_sm@1x.webp') 1x,

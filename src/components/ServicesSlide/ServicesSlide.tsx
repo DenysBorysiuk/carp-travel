@@ -2,7 +2,15 @@ import Image from 'next/image';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { ServicesSlideProps } from './type';
 
-const ServicesSlide = ({ title, currentSlide, img, slogan, text }: ServicesSlideProps) => {
+const ServicesSlide = ({
+  title,
+  list,
+  onButtonClick,
+  currentSlide,
+  img,
+  slogan,
+  text,
+}: ServicesSlideProps) => {
   return (
     <div className="container">
       <div className="md:mb-[36px] md:flex md:gap-[170px] xl:mb-[23px] xl:gap-[162px]">
@@ -21,8 +29,29 @@ const ServicesSlide = ({ title, currentSlide, img, slogan, text }: ServicesSlide
           <Image src={img.href} alt={img.alt} fill priority />
         </div>
         <div className="md:w-[221px]">
-          <p>{slogan}</p>
-          <p>{text}</p>
+          <p className="mb-[24px] text-right text-[12px] leading-loose">{slogan}</p>
+          <div className="flex h-[320px] flex-col justify-between">
+            <ul className="flex flex-col gap-[16px]">
+              {list.map((item, index) => (
+                <li key={item}>
+                  <button
+                    className={`anim relative flex w-[169px] items-center text-left  text-[20px]
+                     font-extralight uppercase leading-[0.85] transition-all  
+                    ${
+                      currentSlide === index
+                        ? 'btn ml-[16px] font-medium'
+                        : 'opacity-50 hover:ml-[8px] hover:opacity-100 focus:ml-[8px]  focus:opacity-100'
+                    }`}
+                    type="button"
+                    onClick={() => onButtonClick(index)}
+                  >
+                    {item}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <p className="">{text}</p>
+          </div>
         </div>
       </div>
     </div>

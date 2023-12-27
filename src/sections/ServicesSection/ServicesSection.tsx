@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef, SwiperClass } from 'swiper/react';
 import { EffectFade, Pagination } from 'swiper/modules';
 import ServicesSlide from '@/components/ServicesSlide';
 import data from '@/data/services.json';
@@ -10,27 +10,39 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
-const { slides, title } = data;
+const { slides, title, list } = data;
 
 const ServicesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
+
+  const onButtonClick = (index: number) => {
+    swiperInstance?.slideTo(index);
+  };
+
   return (
     <section className="p-0" id="services">
       <Swiper
+        wrapperTag="ul"
         modules={[EffectFade, Pagination]}
+        grabCursor={false}
+        allowTouchMove={false}
         effect="fade"
         slidesPerView={1}
-        // pagination={{
-        //   clickable: true,
-        // }}
         onSlideChange={swiper => setCurrentSlide(swiper.realIndex)}
-        // onSwiper={swiper => console.log(swiper)}
+        onSwiper={setSwiperInstance}
       >
         {slides.map((slide, idx) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide key={idx} tag="li">
             {({ isActive }) => (
               <div className={`${slide.bg} py-[56px] md:py-[64px] xl:py-[104px] smOnly:h-[851px]`}>
-                <ServicesSlide {...slide} title={title} currentSlide={currentSlide} />
+                <ServicesSlide
+                  {...slide}
+                  title={title}
+                  onButtonClick={onButtonClick}
+                  currentSlide={currentSlide}
+                  list={list}
+                />
               </div>
             )}
           </SwiperSlide>
