@@ -151,7 +151,7 @@ p {
 */
 .btn::before {
   content: '';
-  @apply absolute left-[-16px] h-[9px] w-[9px] bg-[url('/icons/bullet.svg')];
+  @apply absolute left-[-14px] h-[6px] w-[6px] bg-[url('/icons/bullet.svg')];
 }
 
 .services-bg-1,
