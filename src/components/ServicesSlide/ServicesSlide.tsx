@@ -31,7 +31,7 @@ const ServicesSlide = ({
         <div className="relative md:w-[221px] xl:w-[605px]">
           <p
             className="text-[12px] leading-loose tracking-[2.4px] md:absolute md:top-[197px] 
-           xl:hidden smOnly:mb-[24px] smOnly:text-right"
+            xl:hidden smOnly:mb-[24px] smOnly:text-right"
           >
             {slogan}
           </p>
@@ -40,18 +40,26 @@ const ServicesSlide = ({
               {list.map((item, index) => (
                 <li key={item}>
                   <button
-                    className={`anim relative flex w-[169px] items-center text-left text-[20px]
-                     font-extralight uppercase leading-[0.85] transition-all md:w-[186px] md:text-[22px] 
-                     md:leading-[0.82]
+                    className={`anim  relative flex w-[169px] items-center
+                     text-left text-[20px] font-extralight uppercase leading-[0.85] transition-all 
+                     md:w-[186px] md:text-[22px] md:leading-[0.82]
                     ${
                       currentSlide === index
-                        ? 'btn ml-[14px] font-medium'
-                        : 'opacity-50 hover:ml-[8px] hover:opacity-100 focus:ml-[8px]  focus:opacity-100'
+                        ? 'btn ml-[16px] font-medium'
+                        : 'opacity-50 hover:ml-[8px] hover:opacity-100 focus:ml-[8px] focus:opacity-100'
                     }`}
                     type="button"
                     onClick={() => onButtonClick(index)}
                   >
                     {item}
+                    {currentSlide === index && (
+                      <p
+                        className="left-[300px] top-[-5px] hidden w-[293px] text-[12px] leading-loose
+                      tracking-[2.4px] xl:absolute xl:block"
+                      >
+                        {slogan}
+                      </p>
+                    )}
                   </button>
                 </li>
               ))}
