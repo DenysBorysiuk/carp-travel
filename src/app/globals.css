@@ -388,7 +388,7 @@ p {
 
 .swiper.gallery .swiper-slide.gallery-slider.swiper-slide-next,
 .swiper.gallery .swiper-slide.gallery-slider.swiper-slide-prev {
-  height: 187px !important;
+  height: 200px !important;
   opacity: 1;
 
   @media screen and (min-width: 768px) {
