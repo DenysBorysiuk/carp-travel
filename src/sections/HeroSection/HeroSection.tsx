@@ -36,9 +36,9 @@ const HeroSection = () => {
         <p className="text-justify md:mb-[28px] md:w-[230px] xl:w-[294px]">{text}</p>
         <Link
           href={link.href}
-          className="frame relative flex h-[53px] items-center justify-center bg-white/10 text-[18px]
-          font-bold uppercase hover:bg-white/20 focus:bg-white/20 md:h-[50px]
-          md:w-[230px] xl:h-[71px] xl:w-[293px] xl:text-[32px]"
+          className="frame anim relative flex h-[53px] items-center justify-center bg-white/10
+          text-[18px] font-bold uppercase transition-colors hover:bg-white/20
+          focus:bg-white/20 md:h-[50px] md:w-[230px] xl:h-[71px] xl:w-[293px] xl:text-[32px]"
         >
           {link.label}
         </Link>

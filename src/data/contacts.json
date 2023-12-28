@@ -45,14 +45,14 @@
   "form": {
     "inputs": [
       {
-        "id": "userName",
+        "id": "i05",
         "type": "text",
         "name": "userName",
         "label": "Full name",
         "placeholder": "John Smith"
       },
       {
-        "id": "email",
+        "id": "i06",
         "type": "text",
         "name": "email",
         "label": "E-mail",
@@ -60,7 +60,7 @@
       }
     ],
     "textarea": {
-      "id": "message",
+      "id": "t02",
       "name": "message",
       "label": "Message"
     }
