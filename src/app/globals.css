@@ -386,8 +386,8 @@ p {
   @apply md:opacity-0;
 }
 
-.gallery-slider.swiper-slide-next,
-.gallery-slider.swiper-slide-prev {
+.swiper.gallery .swiper-slide.gallery-slider.swiper-slide-next,
+.swiper.gallery .swiper-slide.gallery-slider.swiper-slide-prev {
   height: 187px !important;
   opacity: 1;
 
@@ -402,7 +402,7 @@ p {
   }
 }
 
-.gallery-slider.swiper-slide-active {
+.swiper.gallery .swiper-slide.gallery-slider.swiper-slide-active {
   height: 187px !important;
   opacity: 1;
 
