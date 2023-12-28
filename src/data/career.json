@@ -60,7 +60,7 @@
       "name": "message",
       "label": "Message"
     },
-    "checkbox": {
+    "input": {
       "type": "checkbox",
       "name": "confirm",
       "label": "I confirm my consent to the processing of personal data."
