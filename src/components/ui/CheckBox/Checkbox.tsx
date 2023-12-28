@@ -1,6 +1,6 @@
-import { FieldProps } from './type';
+import { CheckBoxProps } from './type';
 
-const CheckBox = ({ type, name, label, register, errors, isChecked }: FieldProps) => {
+const CheckBox = ({ type, name, label, register, errors, isChecked }: CheckBoxProps) => {
   return (
     <label
       className={`checkbox relative flex gap-[8px] smOnly:mb-[16px] ${

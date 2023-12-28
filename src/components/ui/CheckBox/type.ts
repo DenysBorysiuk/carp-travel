@@ -1,6 +1,6 @@
 import { FieldValues, UseFormRegister, FieldErrors } from 'react-hook-form';
 
-export type FieldProps = {
+export type CheckBoxProps = {
   className?: string;
   type: string;
   name: string;
