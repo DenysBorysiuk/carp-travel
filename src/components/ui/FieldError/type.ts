@@ -1,6 +1,6 @@
 import { FieldErrors } from 'react-hook-form';
 
-export type ErrorMsgProps = {
+export type FieldErrorProps = {
   errors: FieldErrors;
   name: string;
 };

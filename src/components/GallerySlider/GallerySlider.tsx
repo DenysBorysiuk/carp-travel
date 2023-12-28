@@ -30,8 +30,8 @@ const GallerySlider = () => {
           },
         }}
       >
-        {data.slides.map(({ img, alt }, idx) => (
-          <SwiperSlide tag="li" key={idx} className="relative">
+        {data.slides.map(({ img, alt }, index) => (
+          <SwiperSlide tag="li" key={index} className="relative">
             {({ isActive }) => (
               <div
                 className={`image-wrapper relative h-[187px] transition-all duration-300 ease-[cubic-bezier(.57,.21,.69,1.25)]
@@ -45,7 +45,7 @@ const GallerySlider = () => {
                   src={img}
                   alt={alt}
                   fill
-                  sizes="(max-width: 480px) 280px, (max-width: 1279px) 342px, 606px"
+                  sizes="(max-width: 480px) 280px, (max-width: 1279px) 463px, 606px"
                   quality={90}
                   priority
                 />

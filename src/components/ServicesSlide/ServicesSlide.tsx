@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ServicesList from '@/components/ServicesList';
+import ServicesSlogan from '@/components/ui/ServicesSlogan';
 import { ServicesSlideProps } from './type';
-import ServicesSlogan from '../ui/ServicesSlogan';
 
 const ServicesSlide = ({
   title,
@@ -16,7 +16,7 @@ const ServicesSlide = ({
   return (
     <div className="container">
       <div className="md:mb-[36px] md:flex md:gap-[170px] xl:mb-[23px] xl:gap-[162px]">
-        <SectionTitle className={'md:w-[313px] xl:w-[458px] smOnly:mb-[24px]'} data={title} />
+        <SectionTitle className={'md:w-[313px] xl:w-[458px] smOnly:mb-[24px]'} {...title} />
         <div className="w-[116px] md:w-[181px] xl:w-[265px] smOnly:mb-[16px] smOnly:ml-auto">
           <span className="text-[43px] font-thin leading-[1.21] md:text-[67px] md:leading-[1.16] xl:text-[98px]">
             0{currentSlide + 1}/

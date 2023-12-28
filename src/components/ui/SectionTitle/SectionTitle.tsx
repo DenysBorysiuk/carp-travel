@@ -1,10 +1,10 @@
 import { SectionTitleProps } from './type';
 
-const SectionTitle = ({ className, data }: SectionTitleProps) => {
+const SectionTitle = ({ className, text, textAccent }: SectionTitleProps) => {
   return (
     <h2 className={`${className}`}>
-      {data.text}
-      <span className="font-medium"> {data.textAccent}</span>
+      {text}
+      <span className="font-medium"> {textAccent}</span>
     </h2>
   );
 };

@@ -1,10 +1,10 @@
 import { AboutTextProps } from './type';
 
-const AboutText = ({ className, data }: AboutTextProps) => {
+const AboutText = ({ className, textAccent, text }: AboutTextProps) => {
   return (
     <p className={`${className}`}>
-      <span className="font-normal">{data.textAccent} </span>
-      {data.text}
+      <span className="font-normal">{textAccent} </span>
+      {text}
     </p>
   );
 };

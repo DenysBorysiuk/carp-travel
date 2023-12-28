@@ -8,7 +8,7 @@ const ContactsSection = () => {
   return (
     <section className="contacts-bg xl:pb-[112px]" id="contacts">
       <div className="container">
-        <SectionTitle className={'mb-[36px] xl:mb-[71px] mdOnly:leading-none'} data={data.title} />
+        <SectionTitle className={'mb-[36px] xl:mb-[71px] mdOnly:leading-none'} {...data.title} />
         <div className="xl:ml-[84px] xl:flex xl:gap-[231px]">
           <div
             className="mb-[12px] flex flex-col gap-[24px] md:mb-[64px] md:flex-row md:gap-[90px] 

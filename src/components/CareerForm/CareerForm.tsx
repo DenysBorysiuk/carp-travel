@@ -12,7 +12,7 @@ import data from '@/data/career.json';
 import { schema } from './schema';
 import { CareerFormProps } from './type';
 
-const { form } = data;
+const { form, text2 } = data;
 const { inputs, textarea, checkbox } = form;
 
 const CareerForm = ({ className }: CareerFormProps) => {
@@ -38,8 +38,8 @@ const CareerForm = ({ className }: CareerFormProps) => {
   return (
     <div className={className}>
       <p className="mb-[24px] block w-[179px] md:w-[221px] xl:w-[234px] smOnly:ml-auto">
-        {data.text2[0]}
-        <span className="block">{data.text2[1]}</span>
+        {text2[0]}
+        <span className="block">{text2[1]}</span>
       </p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-[16px] md:mb-[9px] md:flex md:gap-[24px] xl:mb-[24px]">
