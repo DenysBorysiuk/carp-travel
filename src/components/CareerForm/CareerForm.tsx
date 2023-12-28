@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import FormBtn from '@/components/ui/FormBtn';
 import TextArea from '@/components/ui/TextArea';
 import Field from '@/components/ui/Field';
-import CheckBox from '@/components/ui/CheckBox';
+// import CheckBox from '@/components/ui/CheckBox';
 import data from '@/data/career.json';
 import { schema } from './schema';
 import { CareerFormProps } from './type';
@@ -62,7 +62,7 @@ const CareerForm = ({ className }: CareerFormProps) => {
           />
         </div>
         <div className="md:flex md:items-baseline">
-          <CheckBox {...checkbox} register={register} errors={errors} isChecked={watch().confirm} />
+          {/* <CheckBox {...checkbox} register={register} errors={errors} isChecked={watch().confirm} /> */}
           <FormBtn />
         </div>
       </form>
