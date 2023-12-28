@@ -31,7 +31,7 @@ const GallerySlider = () => {
         }}
       >
         {data.slides.map(({ img, alt }, index) => (
-          <SwiperSlide tag="li" key={index} className="">
+          <SwiperSlide tag="li" key={index} className="gallery-slider">
             {({ isActive }) => (
               <div
                 className={`image-wrapper relative h-[187px] transition-all duration-300 ease-[cubic-bezier(.57,.21,.69,1.25)]

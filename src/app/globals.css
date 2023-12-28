@@ -382,12 +382,12 @@ p {
   align-items: center;
 }
 
-.gallery .swiper-slide {
+.gallery-slider.swiper-slide {
   @apply md:opacity-0;
 }
 
-.gallery .swiper-slide-next,
-.gallery .swiper-slide-prev {
+.gallery-slider.swiper-slide-next,
+.gallery-slider.swiper-slide-prev {
   height: 187px !important;
   opacity: 1;
 
@@ -402,7 +402,7 @@ p {
   }
 }
 
-.gallery .swiper-slide-active {
+.gallery-slider.swiper-slide-active {
   height: 187px !important;
   opacity: 1;
 
