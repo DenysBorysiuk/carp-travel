@@ -4,7 +4,7 @@ import { NavigationProps } from './type';
 
 const Navigation = ({ variant, className }: NavigationProps) => {
   return (
-    <nav className={`${variant === 'header' ? 'hidden md:block' : ''}`}>
+    <nav className={`${variant === 'header' ? 'hidden md:block' : 'md:hidden'}`}>
       <ul className={`flex ${className}`}>
         {NAV_LINKS.map(({ key, href, title }) => (
           <li key={key}>

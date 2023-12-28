@@ -1,5 +1,5 @@
 import Logo from '@/components/ui/Logo';
-import MobileMenu from '@/components/ui/MobileMenu';
+import MobileMenu from '@/components/MobileMenu';
 import Navigation from '@/components/ui/Navigation';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
       >
         <Logo />
         <MobileMenu />
-        <Navigation variant={'header'} className={'md:gap-[24px] xl:gap-[56px]'} />
+        <Navigation variant="header" className="md:gap-[24px] xl:gap-[56px]" />
       </div>
     </header>
   );

@@ -33,6 +33,7 @@ const config: Config = {
       colors: {
         body: '#0A1813',
         error: '#FF5757',
+        backdrop: 'rgba(1, 10, 5, 0.75)',
       },
     },
   },

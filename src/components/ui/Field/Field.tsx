@@ -5,7 +5,8 @@ const Field = ({ className, id, type, name, label, placeholder, register, errors
   return (
     <div className="relative">
       <label
-        className="mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px] outline-none"
+        className={`outline-none" mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]
+        ${className} ${errors[name] ? 'text-error' : ''}`}
         htmlFor={id}
       >
         {label}
