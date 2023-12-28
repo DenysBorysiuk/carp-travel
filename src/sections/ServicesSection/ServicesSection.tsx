@@ -34,17 +34,15 @@ const ServicesSection = () => {
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx} tag="li">
-            {({ isActive }) => (
-              <div className={`${slide.bg} py-[56px] md:py-[64px] xl:py-[104px] smOnly:h-[851px]`}>
-                <ServicesSlide
-                  {...slide}
-                  title={title}
-                  onButtonClick={onButtonClick}
-                  currentSlide={currentSlide}
-                  list={list}
-                />
-              </div>
-            )}
+            <div className={`${slide.bg} py-[56px] md:py-[64px] xl:py-[104px] smOnly:h-[851px]`}>
+              <ServicesSlide
+                {...slide}
+                title={title}
+                list={list}
+                onButtonClick={onButtonClick}
+                currentSlide={currentSlide}
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
