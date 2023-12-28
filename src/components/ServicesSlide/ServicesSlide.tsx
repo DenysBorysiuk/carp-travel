@@ -7,7 +7,7 @@ import ServicesSlogan from '../ui/ServicesSlogan';
 const ServicesSlide = ({
   title,
   list,
-  onButtonClick,
+  onSlideTo,
   currentSlide,
   img,
   slogan,
@@ -28,7 +28,14 @@ const ServicesSlide = ({
       </div>
       <div className="md:flex md:gap-[20px]">
         <div className="relative h-[213px] md:h-[370px] md:w-[463px] xl:h-[429px] xl:w-[607px] smOnly:mb-[12px]">
-          <Image src={img.href} alt={img.alt} fill priority />
+          <Image
+            src={img.href}
+            alt={img.alt}
+            fill
+            sizes="(max-width: 480px) 280px, (max-width: 1279px) 463px, 607px"
+            quality={90}
+            priority
+          />
         </div>
         <div className="relative md:w-[221px] xl:w-[605px]">
           <ServicesSlogan
@@ -38,7 +45,7 @@ const ServicesSlide = ({
           <div className="flex h-[320px] flex-col justify-between md:h-[370px] xl:h-[429px]">
             <ServicesList
               list={list}
-              onButtonClick={onButtonClick}
+              onSlideTo={onSlideTo}
               currentSlide={currentSlide}
               slogan={slogan}
             />

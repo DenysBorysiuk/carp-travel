@@ -1,14 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Swiper, SwiperSlide, SwiperRef, SwiperClass } from 'swiper/react';
-import { EffectFade, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
+import { EffectFade } from 'swiper/modules';
 import ServicesSlide from '@/components/ServicesSlide';
 import data from '@/data/services.json';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
 
 const { slides, title, list } = data;
 
@@ -16,7 +15,7 @@ const ServicesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
-  const onButtonClick = (index: number) => {
+  const onSlideTo = (index: number) => {
     swiperInstance?.slideTo(index);
   };
 
@@ -24,7 +23,7 @@ const ServicesSection = () => {
     <section className="p-0" id="services">
       <Swiper
         wrapperTag="ul"
-        modules={[EffectFade, Pagination]}
+        modules={[EffectFade]}
         grabCursor={false}
         allowTouchMove={false}
         effect="fade"
@@ -39,7 +38,7 @@ const ServicesSection = () => {
                 {...slide}
                 title={title}
                 list={list}
-                onButtonClick={onButtonClick}
+                onSlideTo={onSlideTo}
                 currentSlide={currentSlide}
               />
             </div>

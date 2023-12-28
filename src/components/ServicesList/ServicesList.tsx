@@ -1,7 +1,7 @@
 import ServicesSlogan from '@/components/ui/ServicesSlogan';
 import { ServicesListProps } from './type';
 
-const ServicesList = ({ list, currentSlide, onButtonClick, slogan }: ServicesListProps) => {
+const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListProps) => {
   return (
     <ul className="flex flex-col gap-[16px] xl:gap-[24px]">
       {list.map((item, index) => (
@@ -16,7 +16,7 @@ const ServicesList = ({ list, currentSlide, onButtonClick, slogan }: ServicesLis
                         : 'opacity-50 hover:ml-[8px] hover:opacity-100 focus:ml-[8px] focus:opacity-100'
                     }`}
             type="button"
-            onClick={() => onButtonClick(index)}
+            onClick={() => onSlideTo(index)}
           >
             {item}
             {currentSlide === index && (
