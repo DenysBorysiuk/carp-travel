@@ -10,7 +10,7 @@ const GallerySlider = () => {
   return (
     <div className="relative mx-auto px-[20px] md:w-[768px] md:px-[32px] xl:w-[1280px] xl:px-0 smOnly:max-w-[480px]">
       <Swiper
-        className="h-[609px] md:h-[295px] xl:h-[430px]"
+        className="gallery h-[609px] md:h-[295px] xl:h-[430px]"
         wrapperTag="ul"
         modules={[Navigation]}
         centeredSlides={true}
@@ -31,7 +31,7 @@ const GallerySlider = () => {
         }}
       >
         {data.slides.map(({ img, alt }, index) => (
-          <SwiperSlide tag="li" key={index} className="gallery-slide">
+          <SwiperSlide tag="li" key={index} className="">
             {({ isActive }) => (
               <div
                 className={`image-wrapper relative h-[187px] transition-all duration-300 ease-[cubic-bezier(.57,.21,.69,1.25)]

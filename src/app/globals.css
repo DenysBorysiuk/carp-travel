@@ -382,12 +382,12 @@ p {
   align-items: center;
 }
 
-.gallery-slide.swiper-slide {
-  opacity: 0;
+.gallery .swiper-slide {
+  @apply md:opacity-0;
 }
 
-.gallery-slide.swiper-slide-next,
-.gallery-slide.swiper-slide-prev {
+.gallery .swiper-slide-next,
+.gallery .swiper-slide-prev {
   height: 187px !important;
   opacity: 1;
 
@@ -402,7 +402,7 @@ p {
   }
 }
 
-.gallery-slide.swiper-slide-active {
+.gallery .swiper-slide-active {
   height: 187px !important;
   opacity: 1;
 
