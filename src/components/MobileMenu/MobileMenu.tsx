@@ -2,7 +2,8 @@
 
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import Navigation from '../ui/Navigation';
+import Navigation from '@/components/Navigation';
+import MobileMenuBtn from '@/components/ui/MobileMenuBtn';
 
 const MobileMenu = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -11,22 +12,16 @@ const MobileMenu = () => {
     setIsOpen(false);
   }
 
-  const onBtnClick = () => {
-    setIsOpen(!isOpen);
-  };
+  function openModal() {
+    setIsOpen(true);
+  }
 
   return (
     <>
-      <button
-        type="button"
-        onClick={onBtnClick}
-        className="z-20 w-[46px] uppercase leading-[1.21] tracking-[1.4px] md:hidden"
-      >
-        Menu
-      </button>
+      <MobileMenuBtn className="w-[46px] md:hidden" label="Menu" onClick={openModal} aria="" />
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10 md:hidden" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -36,11 +31,11 @@ const MobileMenu = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className=" bg-backdrop fixed inset-0 backdrop-blur-[25px]" />
+            <div className=" fixed inset-0 bg-backdrop backdrop-blur-[25px]" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="mx-auto flex min-h-full max-w-[480px] px-[20px] ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -50,10 +45,17 @@ const MobileMenu = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-slate-600 p-6 text-left align-middle shadow-xl transition-all">
-                  <div className="mt-4">
-                    <Navigation variant={'mobile-menu'} className="flex-col" />
-                  </div>
+                <Dialog.Panel className="w-full transform overflow-hidden transition-all">
+                  <MobileMenuBtn
+                    className="mb-[110px] ml-auto mt-[43px] w-[52px]"
+                    label="Close"
+                    onClick={closeModal}
+                    aria=""
+                  />
+                  <Navigation
+                    variant={'mobile-menu'}
+                    className="flex-col items-center gap-[48px]"
+                  />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

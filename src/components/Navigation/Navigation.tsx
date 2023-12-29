@@ -8,7 +8,10 @@ const Navigation = ({ variant, className }: NavigationProps) => {
       <ul className={`flex ${className}`}>
         {NAV_LINKS.map(({ key, href, title }) => (
           <li key={key}>
-            <Link href={href} className="leading-[1.21] tracking-[1.4px]">
+            <Link
+              href={href}
+              className="text-[18px] leading-[1.21] tracking-[1.4px] md:text-[14px]"
+            >
               {title}
             </Link>
           </li>

@@ -1,6 +1,6 @@
 import Logo from '@/components/ui/Logo';
 import MobileMenu from '@/components/MobileMenu';
-import Navigation from '@/components/ui/Navigation';
+import Navigation from '@/components/Navigation';
 
 const Header = () => {
   return (
