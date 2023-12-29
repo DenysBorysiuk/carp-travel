@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { NAV_LINKS } from '@/constants/links';
 import { NavigationProps } from './type';
 
-const Navigation = ({ variant, className }: NavigationProps) => {
+const Navigation = ({ variant, className, onClick }: NavigationProps) => {
   return (
     <nav className={`${variant === 'header' ? 'hidden md:block' : 'md:hidden'}`}>
       <ul className={`flex ${className}`}>
@@ -11,6 +11,7 @@ const Navigation = ({ variant, className }: NavigationProps) => {
             <Link
               href={href}
               className="text-[18px] leading-[1.21] tracking-[1.4px] md:text-[14px]"
+              onClick={onClick}
             >
               {title}
             </Link>

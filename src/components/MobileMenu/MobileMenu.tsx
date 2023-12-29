@@ -55,6 +55,7 @@ const MobileMenu = () => {
                   <Navigation
                     variant={'mobile-menu'}
                     className="flex-col items-center gap-[48px]"
+                    onClick={closeModal}
                   />
                 </Dialog.Panel>
               </Transition.Child>
