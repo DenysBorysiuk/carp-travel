@@ -1,13 +1,23 @@
 import FieldError from '@/components/ui/FieldError';
 import { FieldProps } from './type';
 
-const Field = ({ className, id, type, name, label, placeholder, register, errors }: FieldProps) => {
+const Field = ({
+  className,
+  id,
+  type,
+  name,
+  label,
+  placeholder,
+  register,
+  errors,
+  variant,
+}: FieldProps) => {
   return (
     <div className="relative">
       <label
         className={`outline-none" mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]
         ${className} ${errors[name] ? 'text-error' : ''}`}
-        htmlFor={id}
+        htmlFor={id + variant}
       >
         {label}
       </label>
@@ -19,7 +29,7 @@ const Field = ({ className, id, type, name, label, placeholder, register, errors
         {...register(name)}
         placeholder={placeholder}
         type={type}
-        id={id}
+        id={id + variant}
       />
       {errors[name] && <FieldError errors={errors} name={name} />}
     </div>

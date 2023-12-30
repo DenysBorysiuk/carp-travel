@@ -27,13 +27,13 @@ const CareerSection = () => {
           </h3>
           <div className="md:flex md:gap-[20px] xl:gap-[24px] xl:pl-[40px] ">
             <CareerList />
-            <CareerForm className="smOnly:hidden" />
+            <CareerForm className="smOnly:hidden" variant="md" />
           </div>
         </div>
       </section>
       <section className="career-bg md:hidden">
         <div className="container">
-          <CareerForm className="md:hidden" />
+          <CareerForm variant="sm" />
         </div>
       </section>
     </>
