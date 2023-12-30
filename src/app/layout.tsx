@@ -21,6 +21,22 @@ const karantina = Karantina({
 export const metadata: Metadata = {
   title: 'Carp Travel',
   description: 'Uncover Carpathians Secrets',
+  metadataBase: new URL('https://carp-travel-livid.vercel.app/'),
+
+  openGraph: {
+    url: 'https://carp-travel-livid.vercel.app/',
+    title: 'Carp Travel',
+    description: 'Uncover Carpathians Secrets',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Carpathian mountains',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
