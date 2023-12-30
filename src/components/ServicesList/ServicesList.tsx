@@ -5,9 +5,9 @@ const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListPro
   return (
     <ul className="flex flex-col gap-[16px] xl:gap-[24px]">
       {list.map((item, index) => (
-        <li key={item}>
+        <li className="relative" key={item}>
           <button
-            className={`relative flex w-[169px] items-center
+            className={`flex w-[169px] items-center
                      text-left text-[20px] font-extralight uppercase leading-[0.85] transition-all 
                      duration-300 md:w-[186px] md:text-[22px] md:leading-[0.82]
                     ${
@@ -19,13 +19,13 @@ const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListPro
             onClick={() => onSlideTo(index)}
           >
             {item}
-            {currentSlide === index && (
-              <ServicesSlogan
-                className="left-[295px] top-[-5px] hidden w-[293px] xl:absolute xl:block"
-                slogan={slogan}
-              />
-            )}
           </button>
+          {currentSlide === index && (
+            <ServicesSlogan
+              className="left-[310px] top-[-5px] hidden w-[293px] xl:absolute xl:block"
+              slogan={slogan}
+            />
+          )}
         </li>
       ))}
     </ul>
