@@ -10,7 +10,7 @@ const Navigation = ({ variant, className, onClick }: NavigationProps) => {
           <li key={key}>
             <Link
               href={href}
-              className="hover-anim relative text-[18px] leading-[1.21] tracking-[1.4px] md:text-[14px]"
+              className="link-anim relative text-[18px] leading-[1.21] tracking-[1.4px] md:text-[14px]"
               onClick={onClick}
             >
               {title}

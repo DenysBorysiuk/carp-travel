@@ -11,7 +11,7 @@ const Socials = () => {
         {links.map(({ label, href }) => (
           <li key={label}>
             <a
-              className="contacts-link hover-anim relative"
+              className="contacts-link link-anim relative"
               href={href}
               rel="noopener noreferrer nofollow"
               target="_blank"
