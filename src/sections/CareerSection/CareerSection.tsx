@@ -32,6 +32,7 @@ const CareerSection = () => {
         </div>
       </section>
       <section className="career-bg md:hidden">
+        <h2 className="hidden">Career form</h2>
         <div className="container">
           <CareerForm variant="sm" />
         </div>

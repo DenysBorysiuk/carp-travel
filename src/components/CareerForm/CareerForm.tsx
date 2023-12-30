@@ -60,6 +60,7 @@ const CareerForm = ({ className, variant }: CareerFormProps) => {
             {...textarea}
             className="h-[196px] md:h-[228px] md:w-[221px] xl:h-[268px] xl:w-[292px]"
             register={register}
+            variant={variant}
           />
         </div>
         <div className="md:flex md:items-baseline">

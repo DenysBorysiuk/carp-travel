@@ -6,5 +6,6 @@ export type TextAreaProps = {
   name: string;
   label: string;
   placeholder?: string;
+  variant?: 'sm' | 'md';
   register: UseFormRegister<FieldValues>;
 };
