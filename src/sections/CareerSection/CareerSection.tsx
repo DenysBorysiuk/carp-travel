@@ -33,7 +33,7 @@ const CareerSection = () => {
       </section>
       <section className="career-bg md:hidden">
         <div className="container">
-          <CareerForm />
+          <CareerForm className="md:hidden" />
         </div>
       </section>
     </>
