@@ -17,7 +17,7 @@ const Field = ({
       <label
         className={`outline-none" mb-[4px] block text-[12px] font-extralight leading-loose tracking-[2.4px]
         ${className} ${errors[name] ? 'text-error' : ''}`}
-        htmlFor={id + variant}
+        htmlFor={variant ? id + variant : id}
       >
         {label}
       </label>
@@ -29,7 +29,7 @@ const Field = ({
         {...register(name)}
         placeholder={placeholder}
         type={type}
-        id={id + variant}
+        id={variant ? id + variant : id}
       />
       {errors[name] && <FieldError errors={errors} name={name} />}
     </div>

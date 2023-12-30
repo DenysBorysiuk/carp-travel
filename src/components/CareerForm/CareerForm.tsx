@@ -15,7 +15,7 @@ import { CareerFormProps } from './type';
 const { form, text2 } = data;
 const { inputs, textarea, checkbox } = form;
 
-const CareerForm = ({ className }: CareerFormProps) => {
+const CareerForm = ({ className, variant }: CareerFormProps) => {
   const {
     register,
     reset,
@@ -51,6 +51,7 @@ const CareerForm = ({ className }: CareerFormProps) => {
                   className="md:w-[222px] xl:w-[290px]"
                   register={register}
                   errors={errors}
+                  variant={variant}
                 />
               </li>
             ))}
