@@ -328,6 +328,10 @@ p {
   | Career
   |============================
 */
+.phone::before {
+  content: '+ 38';
+  @apply absolute bottom-[2px] left-[8px] text-[13px] font-extralight xl:bottom-0 xl:text-[20px];
+}
 
 .checkbox::before {
   content: '';
