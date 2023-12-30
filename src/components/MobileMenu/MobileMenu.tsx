@@ -3,7 +3,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import Navigation from '@/components/Navigation';
-import MobileMenuBtn from '@/components/ui/MobileMenuBtn';
+import Button from '@/components/ui/Button';
 
 const MobileMenu = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,12 @@ const MobileMenu = () => {
 
   return (
     <>
-      <MobileMenuBtn className="w-[46px] md:hidden" label="Menu" onClick={openModal} aria="" />
+      <Button
+        className="w-[46px] tracking-[1.4px]  md:hidden"
+        label="Menu"
+        type="button"
+        onClick={openModal}
+      />
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10 md:hidden" onClose={closeModal}>
@@ -46,11 +51,11 @@ const MobileMenu = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full transform overflow-hidden transition-all">
-                  <MobileMenuBtn
-                    className="mb-[110px] ml-auto mt-[43px] w-[52px]"
+                  <Button
+                    className="mb-[110px] ml-auto mt-[43px] w-[52px] tracking-[1.4px]"
                     label="Close"
+                    type="button"
                     onClick={closeModal}
-                    aria=""
                   />
                   <Navigation
                     variant={'mobile-menu'}

@@ -7,9 +7,9 @@ const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListPro
       {list.map((item, index) => (
         <li key={item}>
           <button
-            className={`anim relative flex w-[169px] items-center
+            className={`relative flex w-[169px] items-center
                      text-left text-[20px] font-extralight uppercase leading-[0.85] transition-all 
-                     md:w-[186px] md:text-[22px] md:leading-[0.82]
+                     duration-300 md:w-[186px] md:text-[22px] md:leading-[0.82]
                     ${
                       currentSlide === index
                         ? 'btn ml-[16px] font-medium'

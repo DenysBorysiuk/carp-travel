@@ -14,7 +14,7 @@
 
 /**
   |============================
-  | Common
+  | Common styles
   |============================
 */
 
@@ -48,6 +48,12 @@ p {
 
 .anim {
   @apply duration-300 ease-in-out;
+}
+
+.hover-anim::after {
+  content: '';
+  @apply anim absolute bottom-[-2px] left-0 h-[1px] w-full scale-x-0 transform bg-white
+ transition-transform hover:scale-x-100 focus:scale-x-100;
 }
 
 /**

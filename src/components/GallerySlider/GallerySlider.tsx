@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import data from '@/data/gallery.json';
+import Button from '../ui/Button';
 
 const GallerySlider = () => {
   return (
@@ -54,16 +55,12 @@ const GallerySlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-0 left-[75px] z-10 xl:left-[235px] smOnly:hidden">
-        <button
-          className="button-prev mr-[459px] text-[33px] font-thin uppercase xl:mr-[651px]"
-          type="button"
-        >
-          prev
-        </button>
-        <button className="button-next text-[33px] font-thin uppercase" type="button">
-          next
-        </button>
+      <div
+        className="absolute bottom-0 z-10 md:left-[75px] md:flex md:gap-[459px] xl:left-[235px] 
+      xl:gap-[651px] smOnly:hidden"
+      >
+        <Button className="button-prev text-[33px] font-thin" label="prev" type="button" />
+        <Button className="button-next text-[33px] font-thin" label="next" type="button" />
       </div>
     </div>
   );

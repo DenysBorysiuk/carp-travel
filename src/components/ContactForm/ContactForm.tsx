@@ -6,7 +6,7 @@ import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 import Field from '@/components/ui/Field';
 import TextArea from '@/components/ui/TextArea';
-import FormBtn from '@/components/ui/FormBtn';
+import Button from '@/components/ui/Button';
 import data from '@/data/contacts.json';
 import { schema } from './schema';
 
@@ -54,7 +54,11 @@ const ContactForm = () => {
           register={register}
         />
       </div>
-      <FormBtn />
+      <Button
+        className="ml-auto text-[30px] font-medium xl:text-[32px]"
+        label="Send"
+        type="submit"
+      />
     </form>
   );
 };

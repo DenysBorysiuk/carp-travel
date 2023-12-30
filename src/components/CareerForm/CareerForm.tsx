@@ -4,7 +4,7 @@ import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
-import FormBtn from '@/components/ui/FormBtn';
+import Button from '@/components/ui/Button';
 import TextArea from '@/components/ui/TextArea';
 import Field from '@/components/ui/Field';
 import FormConfirm from '@/components/ui/FormConfirm';
@@ -68,7 +68,11 @@ const CareerForm = ({ className }: CareerFormProps) => {
             errors={errors}
             isChecked={watch().confirm}
           />
-          <FormBtn />
+          <Button
+            className="ml-auto text-[30px] font-medium xl:text-[32px]"
+            label="Send"
+            type="submit"
+          />
         </div>
       </form>
     </div>
