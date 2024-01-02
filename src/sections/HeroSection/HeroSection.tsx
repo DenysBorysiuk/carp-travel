@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import data from '@/data/hero.json';
 
 const { title, resorts, subtitle, text, link } = data;

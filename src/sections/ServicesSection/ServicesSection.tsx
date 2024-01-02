@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
+
 import ServicesSlide from '@/components/ServicesSlide';
+
 import data from '@/data/services.json';
 
 import 'swiper/css';

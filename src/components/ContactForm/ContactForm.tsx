@@ -4,10 +4,13 @@ import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
+
+import data from '@/data/contacts.json';
+
 import Field from '@/components/ui/Field';
 import TextArea from '@/components/ui/TextArea';
 import Button from '@/components/ui/Button';
-import data from '@/data/contacts.json';
+
 import { schema } from './schema';
 
 const { form } = data;

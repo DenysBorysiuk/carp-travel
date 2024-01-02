@@ -1,5 +1,6 @@
 import SectionTitle from '@/components/ui/SectionTitle';
 import AboutText from '@/components/AboutText';
+
 import data from '@/data/about.json';
 
 const { title, descriptions, subtitle } = data;

@@ -1,4 +1,5 @@
 import ServicesSlogan from '@/components/ui/ServicesSlogan';
+
 import { ServicesListProps } from './type';
 
 const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListProps) => {

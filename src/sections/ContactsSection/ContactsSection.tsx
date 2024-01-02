@@ -2,6 +2,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import ContactDetails from '@/components/ContactDetails';
 import Socials from '@/components/ui/Socials';
 import ContactsForm from '@/components/ContactForm';
+
 import data from '@/data/contacts.json';
 
 const ContactsSection = () => {

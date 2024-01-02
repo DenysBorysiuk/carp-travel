@@ -1,5 +1,7 @@
 import Link from 'next/link';
+
 import { NAV_LINKS } from '@/constants/links';
+
 import { NavigationProps } from './type';
 
 const Navigation = ({ variant, className, onClick }: NavigationProps) => {

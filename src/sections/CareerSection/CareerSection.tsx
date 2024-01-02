@@ -1,6 +1,7 @@
 import CareerForm from '@/components/CareerForm';
 import CareerList from '@/components/CareerList';
 import SectionTitle from '@/components/ui/SectionTitle';
+
 import data from '@/data/career.json';
 
 const { title, text1, subtitle } = data;

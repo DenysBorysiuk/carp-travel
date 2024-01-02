@@ -1,5 +1,6 @@
 import GallerySlider from '@/components/GallerySlider';
 import SectionTitle from '@/components/ui/SectionTitle';
+
 import data from '@/data/gallery.json';
 
 const GallerySection = () => {
