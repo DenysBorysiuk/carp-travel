@@ -3,6 +3,7 @@ export type ServicesSlideProps = {
   list: string[];
   currentSlide: number;
   totalSlides: number;
+  isActive: boolean;
   onSlideTo: (index: number) => void;
   img: {
     href: string;

@@ -29,22 +29,26 @@ const ServicesSection = () => {
         grabCursor={false}
         allowTouchMove={false}
         effect="fade"
+        speed={800}
         slidesPerView={1}
         onSlideChange={swiper => setCurrentSlide(swiper.realIndex)}
         onSwiper={setSwiperInstance}
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx} tag="li">
-            <div className={`${slide.bg} py-[56px] md:py-[64px] xl:py-[104px] smOnly:h-[851px]`}>
-              <ServicesSlide
-                {...slide}
-                title={title}
-                list={list}
-                onSlideTo={onSlideTo}
-                currentSlide={currentSlide}
-                totalSlides={slides.length}
-              />
-            </div>
+            {({ isActive }) => (
+              <div className={`${slide.bg} py-[56px] md:py-[64px] xl:py-[104px] smOnly:h-[851px]`}>
+                <ServicesSlide
+                  {...slide}
+                  title={title}
+                  list={list}
+                  onSlideTo={onSlideTo}
+                  currentSlide={currentSlide}
+                  totalSlides={slides.length}
+                  isActive={isActive}
+                />
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

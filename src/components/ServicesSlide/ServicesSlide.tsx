@@ -12,6 +12,7 @@ const ServicesSlide = ({
   onSlideTo,
   currentSlide,
   totalSlides,
+  isActive,
   img,
   slogan,
   text,
@@ -46,17 +47,19 @@ const ServicesSlide = ({
             className="md:absolute md:top-[197px] xl:hidden smOnly:mb-[24px] smOnly:text-right"
             slogan={slogan}
           />
-          <div className="flex h-[320px] flex-col justify-between md:h-[370px] xl:h-[429px]">
-            <ServicesList
-              list={list}
-              onSlideTo={onSlideTo}
-              currentSlide={currentSlide}
-              slogan={slogan}
-            />
-            <p className="md:text-justify xl:ml-auto xl:w-[293px] mdOnly:text-[13px] mdOnly:leading-[1.53]">
-              {text}
-            </p>
-          </div>
+          {isActive && (
+            <div className="flex h-[320px] flex-col justify-between md:h-[370px] xl:h-[429px]">
+              <ServicesList
+                list={list}
+                onSlideTo={onSlideTo}
+                currentSlide={currentSlide}
+                slogan={slogan}
+              />
+              <p className="md:text-justify xl:ml-auto xl:w-[293px] mdOnly:text-[13px] mdOnly:leading-[1.53]">
+                {text}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
