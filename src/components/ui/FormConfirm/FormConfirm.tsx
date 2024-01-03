@@ -1,6 +1,6 @@
 import { FormConfirmProps } from './type';
 
-const FormConfirm = ({ type, name, label, register, errors, isChecked }: FormConfirmProps) => {
+const FormConfirm = ({ type, name, label, register, isChecked }: FormConfirmProps) => {
   return (
     <label
       className={`checkbox relative flex gap-[8px] smOnly:mb-[16px] ${

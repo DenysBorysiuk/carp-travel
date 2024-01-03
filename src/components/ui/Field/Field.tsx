@@ -3,7 +3,7 @@ import FieldError from '@/components/ui/FieldError';
 import { FieldProps } from './type';
 
 const Field = ({
-  className,
+  className = '',
   id,
   type,
   name,

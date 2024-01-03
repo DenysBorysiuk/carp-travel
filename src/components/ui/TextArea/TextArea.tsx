@@ -1,6 +1,6 @@
 import { TextAreaProps } from './type';
 
-const TextArea = ({ className, id, name, label, register, variant }: TextAreaProps) => {
+const TextArea = ({ className = '', id, name, label, register, variant }: TextAreaProps) => {
   return (
     <div>
       <label

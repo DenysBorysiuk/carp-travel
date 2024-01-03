@@ -2,7 +2,7 @@
 
 import { ButtonProps } from './type';
 
-const Button = ({ className, onClick, label, type }: ButtonProps) => {
+const Button = ({ className = '', onClick, label, type }: ButtonProps) => {
   return (
     <button
       type={type}

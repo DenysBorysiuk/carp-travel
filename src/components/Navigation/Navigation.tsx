@@ -4,7 +4,7 @@ import { NAV_LINKS } from '@/constants/links';
 
 import { NavigationProps } from './type';
 
-const Navigation = ({ variant, className, onClick }: NavigationProps) => {
+const Navigation = ({ variant, className = '', onClick }: NavigationProps) => {
   return (
     <nav className={`${variant === 'header' ? 'hidden md:block' : 'md:hidden'}`}>
       <ul className={`flex ${className}`}>

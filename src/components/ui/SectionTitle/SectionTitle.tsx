@@ -1,6 +1,6 @@
 import { SectionTitleProps } from './type';
 
-const SectionTitle = ({ className, text, textAccent }: SectionTitleProps) => {
+const SectionTitle = ({ className = '', text, textAccent }: SectionTitleProps) => {
   return (
     <h2 className={`${className}`}>
       {text}

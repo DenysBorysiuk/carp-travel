@@ -18,7 +18,7 @@ import { CareerFormProps } from './type';
 const { form, text2 } = data;
 const { inputs, textarea, checkbox } = form;
 
-const CareerForm = ({ className, variant }: CareerFormProps) => {
+const CareerForm = ({ className = '', variant }: CareerFormProps) => {
   const {
     register,
     reset,
@@ -66,12 +66,7 @@ const CareerForm = ({ className, variant }: CareerFormProps) => {
           />
         </div>
         <div className="md:flex md:items-baseline">
-          <FormConfirm
-            {...checkbox}
-            register={register}
-            errors={errors}
-            isChecked={watch().confirm}
-          />
+          <FormConfirm {...checkbox} register={register} isChecked={watch().confirm} />
           <Button
             className="ml-auto text-[30px] font-medium xl:text-[32px]"
             label="Send"
