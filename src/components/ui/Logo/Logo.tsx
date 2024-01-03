@@ -3,8 +3,15 @@ import Image from 'next/image';
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex w-[61px] flex-col gap-[2px]" aria-label="Company logo">
-      <Image src="/icons/logo.png" width={61} height={34} alt="logo" priority />
+    <Link className="h-[34px] w-[61px]" href="/" aria-label="Link to homepage">
+      <Image
+        className="h-full w-full"
+        src="/icons/logo.png"
+        width={61}
+        height={34}
+        alt="Company's logo"
+        priority
+      />
     </Link>
   );
 };
