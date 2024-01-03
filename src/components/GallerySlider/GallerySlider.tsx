@@ -23,6 +23,7 @@ const GallerySlider = () => {
         slidesPerView={3}
         spaceBetween={24}
         loop={true}
+        speed={800}
         navigation={{
           nextEl: '.button-next',
           prevEl: '.button-prev',
@@ -37,7 +38,7 @@ const GallerySlider = () => {
           <SwiperSlide tag="li" key={index} className="gallery-slider">
             {({ isActive }) => (
               <div
-                className={`image-wrapper relative h-[187px] transition-all duration-300 ease-[cubic-bezier(.57,.21,.69,1.25)]
+                className={`image-wrapper  relative h-[187px] transition-all duration-700 ease-[cubic-bezier(.57,.21,.69,1.25)]
                 ${
                   isActive
                     ? 'before:hidden md:h-[294px] md:w-[415px] xl:h-[429px] xl:w-[606px]'
