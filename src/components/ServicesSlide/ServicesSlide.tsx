@@ -11,6 +11,7 @@ const ServicesSlide = ({
   list,
   onSlideTo,
   currentSlide,
+  totalSlides,
   img,
   slogan,
   text,
@@ -24,7 +25,7 @@ const ServicesSlide = ({
             0{currentSlide + 1}/
           </span>
           <span className="text-[43px] font-thin leading-[1.21] text-white/20 md:text-[67px] md:leading-[1.16] xl:text-[98px]">
-            05
+            0{totalSlides}
           </span>
         </div>
       </div>

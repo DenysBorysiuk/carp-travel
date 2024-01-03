@@ -42,6 +42,7 @@ const ServicesSection = () => {
                 list={list}
                 onSlideTo={onSlideTo}
                 currentSlide={currentSlide}
+                totalSlides={slides.length}
               />
             </div>
           </SwiperSlide>

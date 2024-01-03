@@ -2,6 +2,7 @@ export type ServicesSlideProps = {
   title: { text: string; textAccent: string };
   list: string[];
   currentSlide: number;
+  totalSlides: number;
   onSlideTo: (index: number) => void;
   img: {
     href: string;
