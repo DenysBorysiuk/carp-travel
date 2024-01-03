@@ -30,8 +30,7 @@ const ContactForm = () => {
 
   useFormPersist('formData', { watch, setValue });
 
-  const onSubmit: SubmitHandler<FieldValues> = async data => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FieldValues> = async () => {
     reset();
     toast.success('Successfully sent!');
   };
