@@ -34,12 +34,12 @@ const HeroSection = () => {
             {subtitle.text}
           </span>
         </h2>
-        <p className="text-justify md:mb-[28px] md:w-[230px] xl:w-[294px]">{text}</p>
+        <p className="text-justify md:mb-[28px] md:w-[230px] xl:ml-[11px] xl:w-[294px]">{text}</p>
         <Link
           href={link.href}
           className="frame anim relative flex h-[53px] items-center justify-center bg-white/10
           text-[18px] font-bold uppercase transition-colors hover:bg-white/20
-          focus:bg-white/20 md:h-[50px] md:w-[230px] xl:h-[71px] xl:w-[293px] xl:text-[32px]"
+          focus:bg-white/20 md:h-[50px] md:w-[230px] xl:ml-[11px] xl:h-[71px] xl:w-[293px] xl:text-[32px]"
         >
           {link.label}
         </Link>
