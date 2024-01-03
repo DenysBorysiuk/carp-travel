@@ -420,6 +420,7 @@ p {
   .swiper.gallery .swiper-slide.gallery-slider.swiper-slide-active {
     width: 415px !important;
     height: 294px !important;
+    z-index: 2;
   }
 }
 
