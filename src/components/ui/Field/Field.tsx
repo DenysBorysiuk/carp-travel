@@ -1,3 +1,5 @@
+import InputMask from 'react-input-mask';
+
 import FieldError from '@/components/ui/FieldError';
 
 import { FieldProps } from './type';
@@ -22,18 +24,34 @@ const Field = ({
       >
         {label}
       </label>
-      <input
-        className={`relative flex h-[24px] w-full items-center  bg-white/5 font-extralight outline-none
+      {type === 'tel' ? (
+        <InputMask
+          alwaysShowMask={false}
+          mask={'(099) 99 99 999'}
+          className={`relative flex h-[24px] w-full items-center  bg-white/5 font-extralight outline-none
               placeholder:text-[13px] placeholder:text-white/20  md:h-[24px] xl:h-[28px]
+               xl:text-[20px] xl:placeholder:text-[20px] ${className} pl-[40px] pr-[8px] xl:pl-[60px]
+              ${errors[name] ? 'text-error' : ''}
+              `}
+          {...register(name)}
+          placeholder={placeholder}
+          type={type}
+          id={variant ? id + variant : id}
+        />
+      ) : (
+        <input
+          className={`relative flex h-[24px] w-full items-center  bg-white/5 px-[8px] font-extralight
+              outline-none placeholder:text-[13px]  placeholder:text-white/20 md:h-[24px] xl:h-[28px]
                xl:text-[20px] xl:placeholder:text-[20px] ${className} 
               ${errors[name] ? 'text-error' : ''}
-              ${name === 'phone' ? 'pl-[40px] pr-[8px] xl:pl-[60px]' : 'px-[8px]'}
               `}
-        {...register(name)}
-        placeholder={placeholder}
-        type={type}
-        id={variant ? id + variant : id}
-      />
+          {...register(name)}
+          placeholder={placeholder}
+          type={type}
+          id={variant ? id + variant : id}
+        />
+      )}
+
       {errors[name] && <FieldError errors={errors} name={name} />}
     </div>
   );

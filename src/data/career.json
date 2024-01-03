@@ -49,7 +49,7 @@
       },
       {
         "id": "i04",
-        "type": "text",
+        "type": "tel",
         "name": "phone",
         "label": "Phone",
         "placeholder": "(097) 12 34 567"

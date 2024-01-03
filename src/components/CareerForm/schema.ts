@@ -9,11 +9,7 @@ export const schema = yup
       .trim(),
     email: yup.string().required('Invalid email').email('Invalid email'),
     position: yup.string(),
-    phone: yup
-      .string()
-      .required('Incorrect phone')
-      .matches(/^\(\d{3}\) \d{3} \d{2} \d{2}$/, 'Incorrect phone'),
-
+    phone: yup.string().required('Incorrect phone'),
     confirm: yup.boolean(),
     message: yup.string(),
   })
