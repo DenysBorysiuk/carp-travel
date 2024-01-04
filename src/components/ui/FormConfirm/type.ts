@@ -1,4 +1,4 @@
-import { FieldValues, UseFormRegister } from 'react-hook-form';
+import { FieldValues, UseFormRegister, FieldErrors } from 'react-hook-form';
 
 export type FormConfirmProps = {
   type: string;
@@ -6,4 +6,5 @@ export type FormConfirmProps = {
   label: string;
   register: UseFormRegister<FieldValues>;
   isChecked: boolean;
+  errors: FieldErrors;
 };

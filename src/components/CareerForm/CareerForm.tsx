@@ -66,7 +66,12 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
           />
         </div>
         <div className="md:flex md:items-baseline">
-          <FormConfirm {...checkbox} register={register} isChecked={watch().confirm} />
+          <FormConfirm
+            {...checkbox}
+            register={register}
+            isChecked={watch().confirm}
+            errors={errors}
+          />
           <Button
             className="ml-auto text-[30px] font-medium xl:text-[32px]"
             label="Send"

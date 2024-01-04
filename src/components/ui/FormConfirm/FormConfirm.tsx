@@ -1,13 +1,13 @@
 import { FormConfirmProps } from './type';
 
-const FormConfirm = ({ type, name, label, register, isChecked }: FormConfirmProps) => {
+const FormConfirm = ({ type, name, label, register, isChecked, errors }: FormConfirmProps) => {
   return (
     <label
       className={`checkbox relative flex gap-[8px] smOnly:mb-[16px] ${
         isChecked
           ? "before:bg-[url('/icons/checked.svg')]"
           : "before:bg-[url('/icons/unchecked.svg')]"
-      }`}
+      } ${errors[name] ? 'before:border-2 before:border-error' : ''}`}
     >
       <input
         className="h-[22px] w-[22px] cursor-pointer appearance-none xl:h-[24px] xl:w-[24px]"

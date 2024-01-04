@@ -13,7 +13,7 @@ export const schema = yup
       .string()
       .matches(/^\(\d{3}\) \d{2} \d{2} \d{3}$/, 'Incorrect phone')
       .required('Incorrect phone'),
-    confirm: yup.boolean(),
+    confirm: yup.boolean().required('confirm is required').oneOf([true], 'Must be confirmed.'),
     message: yup.string(),
   })
   .required();
