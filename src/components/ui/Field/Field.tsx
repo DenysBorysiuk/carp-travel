@@ -1,5 +1,4 @@
 import InputMask from 'react-input-mask';
-import { Controller } from 'react-hook-form';
 
 import FieldError from '@/components/ui/FieldError';
 
@@ -15,7 +14,6 @@ const Field = ({
   register,
   errors,
   variant,
-  control,
 }: FieldProps) => {
   return (
     <div className={`relative ${name === 'phone' ? 'phone ' : ''}`}>

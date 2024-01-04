@@ -25,7 +25,6 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
     handleSubmit,
     watch,
     setValue,
-    control,
     formState: { errors },
   } = useForm<FieldValues>({
     resolver: yupResolver(schema) as FieldValues | any,
@@ -56,7 +55,6 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
                   register={register}
                   errors={errors}
                   variant={variant}
-                  control={control}
                 />
               </li>
             ))}

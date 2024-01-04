@@ -10,5 +10,4 @@ export type FieldProps = {
   placeholder?: string;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
-  control: any;
 };
