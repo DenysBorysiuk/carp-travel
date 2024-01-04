@@ -9,7 +9,7 @@ export const schema = yup
       .trim(),
     email: yup.string().required('Invalid email').email('Invalid email'),
     position: yup.string(),
-    phone: yup.string().required('Incorrect phone'),
+    phone: yup.string().min(10, 'Incorrect phone').required('Incorrect phone'),
     confirm: yup.boolean(),
     message: yup.string(),
   })
