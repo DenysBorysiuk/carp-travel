@@ -32,8 +32,7 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
 
   useFormPersist('formData', { watch, setValue });
 
-  const onSubmit: SubmitHandler<FieldValues> = async values => {
-    console.log(values);
+  const onSubmit: SubmitHandler<FieldValues> = async () => {
     reset();
     toast.success('Successfully sent!');
   };
