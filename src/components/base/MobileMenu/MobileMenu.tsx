@@ -3,7 +3,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
-import Navigation from '@/components/Navigation';
+import Navigation from '@/components/base/Navigation';
 import Button from '@/components/ui/Button';
 
 const MobileMenu = () => {

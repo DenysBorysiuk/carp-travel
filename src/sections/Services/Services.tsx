@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
 
-import ServicesSlide from '@/components/ServicesSlide';
+import ServicesSlide from '@/components/base/ServicesSlide';
 
 import data from '@/data/services.json';
 
@@ -13,7 +13,7 @@ import 'swiper/css/effect-fade';
 
 const { slides, title, list } = data;
 
-const ServicesSection = () => {
+export const Services = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
@@ -55,5 +55,3 @@ const ServicesSection = () => {
     </section>
   );
 };
-
-export default ServicesSection;

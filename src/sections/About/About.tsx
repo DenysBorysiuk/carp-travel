@@ -1,19 +1,21 @@
 import SectionTitle from '@/components/ui/SectionTitle';
-import AboutText from '@/components/AboutText';
+import AboutText from '@/components/base/AboutText';
 
 import data from '@/data/about.json';
 
 const { title, descriptions, subtitle } = data;
 const { text, textAccent } = subtitle;
 
-const AboutSection = () => {
+export const About = () => {
   return (
     <section className="about-bg" id="about">
       <div className="container relative">
         <div className="mb-[40px] md:mb-[64px] md:flex md:gap-[76px] xl:mb-[72px] xl:gap-[24px]">
           <SectionTitle className={'md:w-[408px] xl:w-[606px] smOnly:mb-[8px]'} {...title} />
+
           <div className="w-[180px] md:mt-[9px] md:w-[220px] xl:mt-[16px] xl:w-[292px]">
             <AboutText className={'mb-[24px] mdOnly:mb-[16px]'} {...descriptions[0]} />
+
             <AboutText {...descriptions[1]} />
           </div>
         </div>
@@ -22,9 +24,12 @@ const AboutSection = () => {
           smOnly:mb-[40px] smOnly:ml-auto mdOnly:top-[385px]"
         >
           <span className="uppercase">{textAccent[0]}</span>
+
           <span className="ml-auto uppercase">{textAccent[1]}</span>
+
           <span className="font-extralight tracking-[-0.14px]">{text}</span>
         </h3>
+
         <AboutText
           className={'md:ml-auto md:w-[463px] xl:ml-0 xl:w-[605px]'}
           {...descriptions[2]}
@@ -33,5 +38,3 @@ const AboutSection = () => {
     </section>
   );
 };
-
-export default AboutSection;

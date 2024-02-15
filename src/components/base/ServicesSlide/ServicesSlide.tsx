@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import SectionTitle from '@/components/ui/SectionTitle';
-import ServicesList from '@/components/ServicesList';
+import ServicesList from '@/components/base/ServicesList';
 import ServicesSlogan from '@/components/ui/ServicesSlogan';
 
 import { ServicesSlideProps } from './type';

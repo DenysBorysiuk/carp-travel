@@ -1,6 +1,6 @@
 import { ErrorMessage } from '@hookform/error-message';
 
-import Cross from 'public/icons/cross.svg';
+import Cross from '~/icons/cross.svg';
 import { FieldErrorProps } from './type';
 
 const FieldError = ({ errors, name }: FieldErrorProps) => {

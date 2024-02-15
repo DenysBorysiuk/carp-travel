@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from '@/sections/Header';
+import { Header } from '@/layout';
 import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable}`}>
         <Header />
         <main>{children}</main>
-        <Toaster />
+        {/* <Toaster /> */}
       </body>
     </html>
   );

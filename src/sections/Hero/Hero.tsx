@@ -4,7 +4,7 @@ import data from '@/data/hero.json';
 
 const { title, resorts, subtitle, text, link } = data;
 
-const HeroSection = () => {
+export const Hero = () => {
   return (
     <section className="hero-bg pt-[105px] md:pt-[121px] xl:pt-[130px]">
       <div
@@ -15,12 +15,14 @@ const HeroSection = () => {
           <span className="font-medium">{title.textAccent} </span>
           {title.text}
         </h1>
+
         <p
           className="w-[157px] text-[10px] leading-[1.6] md:w-[263px] md:text-[14px] md:leading-[1.14] 
           md:tracking-[1.26px] xl:w-[608px] xl:text-[16px] xl:leading-[1.5] xl:tracking-[1.44px]"
         >
           {resorts}
         </p>
+
         <h2
           className="relative block h-[52px] w-[118px] leading-[1.21] tracking-[1.64px] first-letter:font-medium 
           first-letter:tracking-normal md:mb-[56px] md:h-[88px] md:w-[230px] xl:mb-[181px] xl:h-[123px] 
@@ -34,7 +36,9 @@ const HeroSection = () => {
             {subtitle.text}
           </span>
         </h2>
+
         <p className="text-justify md:mb-[28px] md:w-[230px] xl:ml-[11px] xl:w-[294px]">{text}</p>
+
         <Link
           href={link.href}
           className="frame anim relative flex h-[53px] items-center justify-center bg-white/10
@@ -47,5 +51,3 @@ const HeroSection = () => {
     </section>
   );
 };
-
-export default HeroSection;
