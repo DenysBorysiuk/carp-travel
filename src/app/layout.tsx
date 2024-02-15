@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable}`}>
         <Header />
         <main>{children}</main>
-        {/* <Toaster /> */}
+        <Toaster />
       </body>
     </html>
   );

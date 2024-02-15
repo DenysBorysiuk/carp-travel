@@ -4,18 +4,17 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
 
-import ServicesSlide from '@/components/base/ServicesSlide';
+import { ServicesSlide } from '@/components/base';
 
 import data from '@/data/services.json';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-const { slides, title, list } = data;
-
 export const Services = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
+  const { slides, title, list } = data;
 
   const onSlideTo = (index: number) => {
     swiperInstance?.slideTo(index);

@@ -1,1 +1,1 @@
-export { default } from './ServicesSlogan';
+export * from './ServicesSlogan';

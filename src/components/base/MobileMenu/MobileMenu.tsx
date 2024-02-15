@@ -3,10 +3,10 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
-import Navigation from '@/components/base/Navigation';
-import Button from '@/components/ui/Button';
+import { Navigation } from '@/components/base';
+import { Button } from '@/components/ui';
 
-const MobileMenu = () => {
+export const MobileMenu = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -58,6 +58,7 @@ const MobileMenu = () => {
                     type="button"
                     onClick={closeModal}
                   />
+
                   <Navigation
                     variant={'mobile-menu'}
                     className="flex-col items-center gap-[48px]"
@@ -72,5 +73,3 @@ const MobileMenu = () => {
     </>
   );
 };
-
-export default MobileMenu;

@@ -1,7 +1,5 @@
-import SectionTitle from '@/components/ui/SectionTitle';
-import ContactDetails from '@/components/base/ContactDetails';
-import Socials from '@/components/ui/Socials';
-import ContactsForm from '@/components/base/ContactForm';
+import { SectionTitle, Socials, ContactDetails } from '@/components/ui';
+import { ContactForm } from '@/components/base';
 
 import data from '@/data/contacts.json';
 
@@ -21,7 +19,7 @@ export const Contacts = () => {
             <Socials />
           </div>
 
-          <ContactsForm />
+          <ContactForm />
         </div>
       </div>
     </section>

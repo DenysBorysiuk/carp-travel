@@ -1,12 +1,12 @@
-import SectionTitle from '@/components/ui/SectionTitle';
-import AboutText from '@/components/base/AboutText';
+import { SectionTitle } from '@/components/ui';
+import { AboutText } from '@/components/base';
 
 import data from '@/data/about.json';
 
-const { title, descriptions, subtitle } = data;
-const { text, textAccent } = subtitle;
-
 export const About = () => {
+  const { title, descriptions, subtitle } = data;
+  const { text, textAccent } = subtitle;
+
   return (
     <section className="about-bg" id="about">
       <div className="container relative">

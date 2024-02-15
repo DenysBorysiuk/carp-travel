@@ -1,10 +1,12 @@
+'use client';
+
 import InputMask from 'react-input-mask';
 
-import FieldError from '@/components/ui/FieldError';
+import { FieldError } from '@/components/ui';
 
 import { FieldProps } from './type';
 
-const Field = ({
+export const Field = ({
   className = '',
   id,
   type,
@@ -24,6 +26,7 @@ const Field = ({
       >
         {label}
       </label>
+
       {type === 'tel' ? (
         <InputMask
           alwaysShowMask={false}
@@ -56,5 +59,3 @@ const Field = ({
     </div>
   );
 };
-
-export default Field;

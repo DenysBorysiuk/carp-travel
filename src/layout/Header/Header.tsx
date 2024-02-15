@@ -1,6 +1,5 @@
-import Logo from '@/components/ui/Logo';
-import MobileMenu from '@/components/base/MobileMenu';
-import Navigation from '@/components/base/Navigation';
+import { Logo } from '@/components/ui';
+import { MobileMenu, Navigation } from '@/components/base';
 
 export const Header = () => {
   return (

@@ -5,18 +5,15 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 
-import data from '@/data/contacts.json';
+import { Field, TextArea, Button } from '@/components/ui';
 
-import Field from '@/components/ui/Field';
-import TextArea from '@/components/ui/TextArea';
-import Button from '@/components/ui/Button';
+import data from '@/data/contacts.json';
 
 import { schema } from './schema';
 
-const { form } = data;
-const { inputs, textarea } = form;
-
-const ContactForm = () => {
+export const ContactForm = () => {
+  const { form } = data;
+  const { inputs, textarea } = form;
   const {
     register,
     reset,
@@ -50,12 +47,14 @@ const ContactForm = () => {
             </li>
           ))}
         </ul>
+
         <TextArea
           {...textarea}
           className="h-[193px] md:h-[221px] md:w-[464px] xl:h-[174px] xl:w-[607px]"
           register={register}
         />
       </div>
+
       <Button
         className="ml-auto text-[30px] font-medium xl:text-[32px]"
         label="Send"
@@ -64,5 +63,3 @@ const ContactForm = () => {
     </form>
   );
 };
-
-export default ContactForm;

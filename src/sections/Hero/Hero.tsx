@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 import data from '@/data/hero.json';
 
-const { title, resorts, subtitle, text, link } = data;
-
 export const Hero = () => {
+  const { title, resorts, subtitle, text, link } = data;
+
   return (
     <section className="hero-bg pt-[105px] md:pt-[121px] xl:pt-[130px]">
       <div

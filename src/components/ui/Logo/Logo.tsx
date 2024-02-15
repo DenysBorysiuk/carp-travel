@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <Link className="h-[34px] w-[61px]" href="/" aria-label="Link to homepage">
       <Image
@@ -15,5 +15,3 @@ const Logo = () => {
     </Link>
   );
 };
-
-export default Logo;

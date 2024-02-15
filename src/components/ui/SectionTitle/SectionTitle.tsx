@@ -1,6 +1,6 @@
 import { SectionTitleProps } from './type';
 
-const SectionTitle = ({ className = '', text, textAccent }: SectionTitleProps) => {
+export const SectionTitle = ({ className = '', text, textAccent }: SectionTitleProps) => {
   return (
     <h2 className={`${className}`}>
       {text}
@@ -8,5 +8,3 @@ const SectionTitle = ({ className = '', text, textAccent }: SectionTitleProps) =
     </h2>
   );
 };
-
-export default SectionTitle;

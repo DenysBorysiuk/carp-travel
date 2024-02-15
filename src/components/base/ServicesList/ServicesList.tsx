@@ -1,8 +1,8 @@
-import ServicesSlogan from '@/components/ui/ServicesSlogan';
+import { ServicesSlogan } from '@/components/ui';
 
 import { ServicesListProps } from './type';
 
-const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListProps) => {
+export const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListProps) => {
   return (
     <ul className="flex flex-col gap-[16px] xl:gap-[24px]">
       {list.map((item, index) => (
@@ -22,6 +22,7 @@ const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListPro
           >
             {item}
           </button>
+
           {currentSlide === index && (
             <ServicesSlogan
               className="left-[310px] top-[-5px] hidden w-[293px] xl:absolute xl:block"
@@ -33,5 +34,3 @@ const ServicesList = ({ list, currentSlide, onSlideTo, slogan }: ServicesListPro
     </ul>
   );
 };
-
-export default ServicesList;

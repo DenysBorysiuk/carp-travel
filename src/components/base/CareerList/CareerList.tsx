@@ -1,6 +1,6 @@
 import data from '@/data/career.json';
 
-const CareerList = () => {
+export const CareerList = () => {
   return (
     <ul
       className=" flex w-[181px] flex-col gap-[16px] md:w-[225px] md:gap-[24px] xl:mt-[87px] 
@@ -14,6 +14,7 @@ const CareerList = () => {
           >
             {item.title}
           </h4>
+
           <p className="text-[12px] leading-[1.67] xl:w-[285px] xl:text-left xl:leading-loose">
             {item.text}
           </p>
@@ -22,5 +23,3 @@ const CareerList = () => {
     </ul>
   );
 };
-
-export default CareerList;

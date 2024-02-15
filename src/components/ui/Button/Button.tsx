@@ -2,7 +2,7 @@
 
 import { ButtonProps } from './type';
 
-const Button = ({ className = '', onClick, label, type }: ButtonProps) => {
+export const Button = ({ className = '', onClick, label, type }: ButtonProps) => {
   return (
     <button
       type={type}
@@ -13,5 +13,3 @@ const Button = ({ className = '', onClick, label, type }: ButtonProps) => {
     </button>
   );
 };
-
-export default Button;

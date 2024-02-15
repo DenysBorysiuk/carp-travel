@@ -5,20 +5,16 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 
-import data from '@/data/career.json';
+import { Button, TextArea, Field, FormConfirm } from '@/components/ui';
 
-import Button from '@/components/ui/Button';
-import TextArea from '@/components/ui/TextArea';
-import Field from '@/components/ui/Field';
-import FormConfirm from '@/components/ui/FormConfirm';
+import data from '@/data/career.json';
 
 import { schema } from './schema';
 import { CareerFormProps } from './type';
 
-const { form, text2 } = data;
-const { inputs, textarea, checkbox } = form;
-
-const CareerForm = ({ className = '', variant }: CareerFormProps) => {
+export const CareerForm = ({ className = '', variant }: CareerFormProps) => {
+  const { form, text2 } = data;
+  const { inputs, textarea, checkbox } = form;
   const {
     register,
     reset,
@@ -43,6 +39,7 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
         {text2[0]}
         <span className="block">{text2[1]}</span>
       </p>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-[16px] md:mb-[9px] md:flex md:gap-[24px] xl:mb-[24px]">
           <ul className="flex flex-col gap-[16px] xl:gap-[24px] smOnly:mb-[16px]">
@@ -58,6 +55,7 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
               </li>
             ))}
           </ul>
+
           <TextArea
             {...textarea}
             className="h-[196px] md:h-[228px] md:w-[221px] xl:h-[268px] xl:w-[292px]"
@@ -65,6 +63,7 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
             variant={variant}
           />
         </div>
+
         <div className="md:flex md:items-baseline">
           <FormConfirm
             {...checkbox}
@@ -72,6 +71,7 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
             isChecked={watch().confirm}
             errors={errors}
           />
+
           <Button
             className="ml-auto text-[30px] font-medium xl:text-[32px]"
             label="Send"
@@ -82,5 +82,3 @@ const CareerForm = ({ className = '', variant }: CareerFormProps) => {
     </div>
   );
 };
-
-export default CareerForm;

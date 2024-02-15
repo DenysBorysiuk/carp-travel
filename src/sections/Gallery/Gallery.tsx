@@ -1,5 +1,5 @@
-import GallerySlider from '@/components/base/GallerySlider';
-import SectionTitle from '@/components/ui/SectionTitle';
+import { GallerySlider } from '@/components/base';
+import { SectionTitle } from '@/components/ui';
 
 import data from '@/data/gallery.json';
 

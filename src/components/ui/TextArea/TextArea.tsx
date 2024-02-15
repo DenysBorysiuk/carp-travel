@@ -1,6 +1,6 @@
 import { TextAreaProps } from './type';
 
-const TextArea = ({ className = '', id, name, label, register, variant }: TextAreaProps) => {
+export const TextArea = ({ className = '', id, name, label, register, variant }: TextAreaProps) => {
   return (
     <div>
       <label
@@ -9,6 +9,7 @@ const TextArea = ({ className = '', id, name, label, register, variant }: TextAr
       >
         {label}
       </label>
+
       <textarea
         className={`block w-full resize-none bg-white/5 px-[8px] outline-none ${className}`}
         id={variant ? id + variant : id}
@@ -17,5 +18,3 @@ const TextArea = ({ className = '', id, name, label, register, variant }: TextAr
     </div>
   );
 };
-
-export default TextArea;

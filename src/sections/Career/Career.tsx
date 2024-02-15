@@ -1,12 +1,11 @@
-import CareerForm from '@/components/base/CareerForm';
-import CareerList from '@/components/base/CareerList';
-import SectionTitle from '@/components/ui/SectionTitle';
+import { CareerForm, CareerList } from '@/components/base';
+import { SectionTitle } from '@/components/ui';
 
 import data from '@/data/career.json';
 
-const { title, text1, subtitle } = data;
-
 export const Career = () => {
+  const { title, text1, subtitle } = data;
+
   return (
     <>
       <section className="career-bg" id="career">
@@ -21,6 +20,7 @@ export const Career = () => {
               {text1}
             </p>
           </div>
+
           <h3
             className="mb-[36px] ml-[100px] text-[30px] font-extralight uppercase leading-[1.21] md:mb-[56px] 
             md:ml-[80px] xl:absolute xl:mb-0 xl:ml-[123px] xl:text-[36px] xl:leading-none"
