@@ -1,7 +1,12 @@
 # Landing page for Carp Travel
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**[View live page](https://carp-travel-livid.vercel.app)**
+
+---
+
+![Site image](./public/images/og-image.jpg)
+
+## 🗂️ Project description 🗂️
 
 ## Goals
 
