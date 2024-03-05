@@ -8,17 +8,17 @@
 
 ## 🗂️ Project description 🗂️
 
-## Goals
+### Goals
 
 Implement the Carp Travel landing page according to the technical specifications.
 
-## Used Technologies:
+### Used Technologies:
 
 - Next.js
 - TypeScript
 - Tailwind
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 - The layout is fixed in pixels.
 - Semantic and valid markup; accessibility (a11y) is a bonus.
@@ -30,11 +30,11 @@ Implement the Carp Travel landing page according to the technical specifications
 - Clean code with preserved formatting. Consider using ESLint/Prettier.
 - Code is divided into separate components.
 
-## Supported Languages
+### Supported Languages
 
 - English
 
-## Project structure
+### Project structure
 
 ```mermaid
 graph LR
