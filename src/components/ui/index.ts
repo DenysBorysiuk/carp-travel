@@ -8,3 +8,4 @@ export * from './Socials';
 export * from './TextArea';
 export * from './Logo';
 export * from './ContactDetails';
+export * from './Spinner';

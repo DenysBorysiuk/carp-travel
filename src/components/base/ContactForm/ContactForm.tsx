@@ -5,7 +5,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 
-import { Field, TextArea, Button } from '@/components/ui';
+import { sendToGoogleSheet } from '@/actions/sendToGoogleSheet';
+
+import { Field, TextArea, Button, Spinner } from '@/components/ui';
 
 import data from '@/data/contacts.json';
 
@@ -20,16 +22,21 @@ export const ContactForm = () => {
     handleSubmit,
     watch,
     setValue,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<FieldValues>({
     resolver: yupResolver(schema) as FieldValues | any,
   });
 
   useFormPersist('formData', { watch, setValue });
 
-  const onSubmit: SubmitHandler<FieldValues> = async () => {
-    reset();
-    toast.success('Successfully sent!');
+  const onSubmit: SubmitHandler<FieldValues> = async data => {
+    try {
+      await sendToGoogleSheet(data);
+      reset();
+      toast.success('Successfully sent!');
+    } catch (error) {
+      toast.error('Something went wrong');
+    }
   };
 
   return (
@@ -55,11 +62,15 @@ export const ContactForm = () => {
         />
       </div>
 
-      <Button
-        className="ml-auto text-[30px] font-medium xl:text-[32px]"
-        label="Send"
-        type="submit"
-      />
+      {isSubmitting ? (
+        <Spinner />
+      ) : (
+        <Button
+          className="ml-auto text-[30px] font-medium xl:text-[32px]"
+          label="Send"
+          type="submit"
+        />
+      )}
     </form>
   );
 };
