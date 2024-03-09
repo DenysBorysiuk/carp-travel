@@ -6,6 +6,7 @@ import useFormPersist from 'react-hook-form-persist';
 import toast from 'react-hot-toast';
 
 import { sendToGoogleSheet } from '@/actions/sendToGoogleSheet';
+import { sendToTelegram } from '@/actions/sendToTelegram';
 
 import { Field, TextArea, Button, Spinner } from '@/components/ui';
 
@@ -31,7 +32,7 @@ export const ContactForm = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async data => {
     try {
-      await sendToGoogleSheet(data);
+      Promise.all([await sendToGoogleSheet(data), await sendToTelegram(data)]);
       reset();
       toast.success('Successfully sent!');
     } catch (error) {
