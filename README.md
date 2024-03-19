@@ -6,14 +6,14 @@
 
 ![Site image](./public/images/og-image.jpg)
 
-## 🗂️ Project description 🗂️
+## 🗂️ Project description 
 
 ### Goals
 
 Implement the Carp Travel landing page according to the technical specifications.
 
 ### Used Technologies:
-
+- React.js
 - Next.js
 - TypeScript
 - Tailwind
@@ -52,7 +52,7 @@ graph LR
 
 ```
 
-## 📂 Deployment
+## ⚙️ Deployment
 
 To deploy this project, you need to perform the following steps:
 
