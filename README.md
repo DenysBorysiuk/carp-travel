@@ -1,4 +1,4 @@
-# :⛰️ Carp Travel 
+# 🗻 Carp Travel 
 
 **[View live page](https://carp-travel-livid.vercel.app)**
 
