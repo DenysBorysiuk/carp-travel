@@ -1,4 +1,4 @@
-# Carp Travel
+# :⛰️ Carp Travel 
 
 **[View live page](https://carp-travel-livid.vercel.app)**
 
@@ -18,7 +18,7 @@ Implement the Carp Travel landing page according to the technical specifications
 - TypeScript
 - Tailwind
 
-### Acceptance Criteria
+### Features
 
 - The layout is fixed in pixels.
 - Semantic and valid markup; accessibility (a11y) is a bonus.
